@@ -1,0 +1,33 @@
+How to import a Blockbench model:
+
+Export and download the file
+Create a folder in /Assets/VFX/ to hold your model
+Select File->New Scene and pick the Model Import Scene
+Ctrl+S to save the scene in the /Assets/VFX/ folder you created
+Drag the exported files into your new folder
+Select the model
+Select the Model tab
+Set Scale Factor to 16
+Press Apply
+Select the Materials tab
+In the folder for your model, right click and select Create->Material
+Name your new material to match the name of your model
+Select the material
+Drag your texture into the Albedo field
+Select your model again
+Drag the material into the defaultMat field
+Click apply
+Drag your model into the Hierarchy
+Right click the model in the Hierarchy and select Prefab->Unpack Completely
+Expand the model in the Hierarchy by clicking the triangle
+Drag the default item onto the Hierarchy
+Delete the original model in the Hierarchy so that only default is left
+Rename default to match your model name, ending in "Model" i.e. "My Thing That I Created Model"
+Select the model in the Hierarchy
+Click Add Component in the Inspector and type in Mesh Collider
+Click Mesh Collider
+A new component will show up in the Inspector
+Click to enable Convex
+From the Hierarchy, drag your model into your model folder
+Delete your model from the Hierarchy
+Your model is now ready to be used
