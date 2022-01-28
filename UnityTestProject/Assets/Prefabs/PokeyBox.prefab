@@ -344,6 +344,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TextBox
       objectReference: {fileID: 0}
+    - target: {fileID: 53919816250476671, guid: 2d581c9e75890754785d66515def1b76, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9081966835169549124, guid: 2d581c9e75890754785d66515def1b76, type: 3}
       propertyPath: m_RootOrder
       value: 1
