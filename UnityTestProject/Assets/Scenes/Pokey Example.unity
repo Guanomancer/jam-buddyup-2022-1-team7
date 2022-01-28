@@ -356,5 +356,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PokeyBox
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8460326821416161641, guid: d0db67a4302f29c429375046d3c6b272, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+    m_RemovedComponents:
+    - {fileID: 3872210021180600476, guid: d0db67a4302f29c429375046d3c6b272, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d0db67a4302f29c429375046d3c6b272, type: 3}
