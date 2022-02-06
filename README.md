@@ -2,11 +2,11 @@
 
 ### Participants (discord ID)
 
-Beck Belaith_Gador#0233
-Charlotte CharlotteC#5879
-Brynmor eatchillis#5358
-GeekyPixels GeekyPixels#2654
-JarvisSenseittv JarvisSenseittv#9931
-Karlo karlo#0420
-Crux Project Crux#9318
-Zefugi Zefugi#3071
+- Beck Belaith_Gador#0233
+- Charlotte CharlotteC#5879
+- Brynmor eatchillis#5358
+- GeekyPixels GeekyPixels#2654
+- JarvisSenseittv JarvisSenseittv#9931
+- Karlo karlo#0420
+- Crux Project Crux#9318
+- Zefugi Zefugi#3071
