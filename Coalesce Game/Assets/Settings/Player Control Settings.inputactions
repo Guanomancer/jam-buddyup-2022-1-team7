@@ -1,0 +1,34 @@
+{
+    "name": "Player Control Settings",
+    "maps": [
+        {
+            "name": "Todzilla",
+            "id": "73d16e74-8229-4fe2-adcf-734a9fda5f8a",
+            "actions": [
+                {
+                    "name": "Camera",
+                    "type": "Value",
+                    "id": "bc2caf40-cb5e-4bf4-8906-7db67592e073",
+                    "expectedControlType": "Vector2",
+                    "processors": "ScaleVector2(x=0.1,y=0.1)",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "dfd7f2c5-7ff7-4a6a-9119-3a034502177d",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Camera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
