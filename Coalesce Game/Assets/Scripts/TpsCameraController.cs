@@ -30,9 +30,9 @@ namespace Coalesce
         public void CameraInput(InputAction.CallbackContext context)
         {
             var vector = context.ReadValue<Vector2>();
-            Debug.Log(vector);
 
             _rotationX = Mathf.Clamp(_rotationX + vector.y, -_cameraXClampAngle, _cameraXClampAngle);
+            
             var eulers = _cameraBoom.localEulerAngles;
             eulers.x = _rotationOffsetX + _rotationX;
             eulers.y += vector.x;
