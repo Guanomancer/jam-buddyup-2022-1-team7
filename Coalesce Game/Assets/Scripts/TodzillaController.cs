@@ -24,8 +24,6 @@ namespace Coalesce
         private Vector3 _crawlInput = Vector3.zero;
         private Vector3 _velocity = Vector3.zero;
         private Vector3 _velocitySmoothDamp = Vector3.zero;
-        private float _angularVelocity = 0;
-        private float _angularSmoothDamp = 0;
 
         public void CrawlingInput(InputAction.CallbackContext context)
             => _crawlInput = context.ReadValue<Vector2>().RemapToVector3();
