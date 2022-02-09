@@ -11,7 +11,8 @@
 [Mm]emoryCaptures/
 [Uu]serSettings/
 
-!/[Bb]uild/
+!/docs/
+!/docs/[Bb]uild/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 ![Aa]ssets/**/*.meta
