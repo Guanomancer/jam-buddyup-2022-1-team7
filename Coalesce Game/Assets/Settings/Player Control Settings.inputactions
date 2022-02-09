@@ -22,6 +22,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Show/Hide Cursor",
+                    "type": "Button",
+                    "id": "5febe8c6-74e1-4c33-b029-813fc7fd981b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -90,6 +99,17 @@
                     "action": "Crawling",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "bdf48e90-abc6-46de-b3e9-351bf841f878",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Show/Hide Cursor",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
