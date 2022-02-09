@@ -25,6 +25,8 @@ namespace Coalesce
             }
 
             _rotationOffsetX = _cameraBoom.localEulerAngles.x;
+
+            //Cursor.lockState = CursorLockMode.Locked;
         }
 
         public void ToggleCursor()
