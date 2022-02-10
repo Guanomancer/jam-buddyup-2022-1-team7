@@ -8,17 +8,16 @@ namespace Coalesce
     {
         public override void OnEnter()
         {
+            EventRouter.Subscribe(EventName.NannyFoundMessyBlock, this);
+            EventRouter.Subscribe(EventName.TodzillaCaught, this);
             Nanny.GetComponent<NannyController>().SetNavigationTarget(Nanny.ChaseTarget);
         }
 
         public override void OnExit()
         {
+            EventRouter.Unsubscribe(EventName.NannyFoundMessyBlock, this);
+            EventRouter.Unsubscribe(EventName.TodzillaCaught, this);
             Nanny.GetComponent<NannyController>().SetNavigationTarget(null);
-        }
-
-        public override void OnStart()
-        {
-            EventRouter.Subscribe(EventName.NannyFoundMessyBlock, this);
         }
 
         public override void OnUpdate()
@@ -31,6 +30,9 @@ namespace Coalesce
             {
                 case EventName.NannyFoundMessyBlock:
                     Nanny.Transition<NannyPickupMessState>();
+                    break;
+                case EventName.TodzillaCaught:
+                    Nanny.Transition<NannyPickupTodzillaState>();
                     break;
             }
         }

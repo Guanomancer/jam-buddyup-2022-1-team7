@@ -4,15 +4,15 @@ using UnityEngine;
 
 namespace Coalesce
 {
-    public class NannyPickupMessState : NannyStateBase
+    public class NannyPickupTodzillaState : NannyStateBase
     {
         public override void OnEnter()
         {
             var controller = Nanny.GetComponent<NannyController>();
             controller.SetNavigationTarget(null);
-            controller.StartCoroutine(controller.PickupBlock(
-                Nanny.GetComponent<PerimeterBlockDetector>().BlocksInReach[0],
-                () => { Nanny.Transition<NannyChaseState>(); }
+            controller.StartCoroutine(controller.PickupTodzilla(
+                Nanny.ChaseTarget,
+                () => { Nanny.Transition<NannyCarryTodzillaState>(); }
                 ));
         }
     }

@@ -12,6 +12,16 @@ namespace Coalesce
             => _chaseTarget;
 
         [SerializeField]
+        private Transform _dropTarget;
+        public Transform DropTarget
+            => _dropTarget;
+
+        [SerializeField]
+        private Transform _restTarget;
+        public Transform RestTarget
+            => _restTarget;
+
+        [SerializeField]
         private string _stateName;
 
         private NannyStateBase _state;
@@ -20,9 +30,10 @@ namespace Coalesce
         public void Transition(NannyStateBase state)
         {
             _state?.OnExit();
+            Debug.Log($"Nanny changed state from {_state?.GetType().Name} to {state?.GetType().Name}.");
             _state = state;
-            _stateName = _state.GetType().Name;
-            _state?.OnEnter();
+            _stateName = _state?.GetType().Name;
+            _state?.Enter();
         }
 
         public void Transition<T>()
@@ -47,6 +58,9 @@ namespace Coalesce
                 new NannyIdleState(),
                 new NannyChaseState(),
                 new NannyPickupMessState(),
+                new NannyPickupTodzillaState(),
+                new NannyCarryTodzillaState(),
+                new NannyGoHaveARestState(),
             };
             foreach (var state in _states)
                 state.Start(this);

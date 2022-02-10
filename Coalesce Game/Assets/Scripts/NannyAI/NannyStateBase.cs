@@ -1,13 +1,23 @@
-﻿namespace Coalesce
+﻿using UnityEngine;
+
+namespace Coalesce
 {
     public abstract class NannyStateBase
     {
         public NannyAI Nanny { get; private set; }
 
+        protected float StateEntryTime { get; private set; }
+
         public void Start(NannyAI nanny)
         {
             Nanny = nanny;
             OnStart();
+        }
+
+        public void Enter()
+        {
+            StateEntryTime = Time.time;
+            OnEnter();
         }
 
         public virtual void OnStart() { }

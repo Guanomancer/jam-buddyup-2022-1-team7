@@ -9,13 +9,16 @@ namespace Coalesce
         private static readonly Dictionary<EventName, List<IEventSubscriber>> _subscribers
             = new Dictionary<EventName, List<IEventSubscriber>>();
 
+        private static IEventSubscriber[] _tmpSubs = new IEventSubscriber[100];
+
         public static void Dispatch(EventName eventName, IEventDispatcher dispatcher)
         {
             if (!_subscribers.ContainsKey(eventName))
                 return;
 
-            foreach (var subscriber in _subscribers[eventName])
-                subscriber.OnEvent(eventName, dispatcher);
+            _subscribers[eventName].CopyTo(_tmpSubs);
+            for (int i = 0; i < _subscribers[eventName].Count; i++)
+                _tmpSubs[i].OnEvent(eventName, dispatcher);
         }
 
         public static void Subscribe(EventName eventName, IEventSubscriber subscriber)

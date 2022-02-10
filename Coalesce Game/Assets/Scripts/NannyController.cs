@@ -13,7 +13,10 @@ namespace Coalesce
         private float _reachDistance = 1.5f;
         [SerializeField]
         private float _pickupTimePerBlock = 1f;
+        [SerializeField]
+        private Transform _todzillaCarryAnchor;
 
+        private Transform _todzillaCarryReference;
         private Transform _navigationTarget;
 
         private NavMeshAgent _agent;
@@ -25,18 +28,42 @@ namespace Coalesce
         private bool _couldReachTodzilla;
 
         public void SetNavigationTarget(Transform navigationTarget)
-            => _navigationTarget = navigationTarget;
-
-        public void PickupBlock(BlockController block, System.Action andThen)
         {
-            StartCoroutine(PickupBlockSequence(block, andThen));
+            _navigationTarget = navigationTarget;
+            if (_navigationTarget != null)
+                _agent.SetDestination(_navigationTarget.position);
         }
 
-        private IEnumerator PickupBlockSequence(BlockController block, System.Action andThen)
+        public float DistanceToTarget
+            => _agent.remainingDistance;
+
+        public IEnumerator PickupBlock(BlockController block, System.Action andThen)
         {
             yield return new WaitForSeconds(_pickupTimePerBlock);
             GetComponent<PerimeterBlockDetector>().RemoveBlockFromReachList(block);
             Destroy(block.gameObject);
+            andThen();
+        }
+
+        public IEnumerator PickupTodzilla(Transform todzilla, System.Action andThen)
+        {
+            _todzillaCarryReference = todzilla;
+            _todzillaCarryReference.GetComponent<TodzillaController>().enabled = false;
+            _todzillaCarryReference.GetComponent<Rigidbody>().isKinematic = true;
+            yield return new WaitForSeconds(_pickupTimePerBlock);
+            _todzillaCarryReference.parent = _todzillaCarryAnchor;
+            _todzillaCarryReference.localPosition = Vector3.zero;
+            _todzillaCarryReference.localRotation = Quaternion.identity;
+            andThen();
+        }
+
+        public IEnumerator PutDownTodzilla(Transform dropTarget, System.Action andThen)
+        {
+            yield return new WaitForSeconds(_pickupTimePerBlock);
+            _todzillaCarryReference.parent = null;
+            _todzillaCarryReference.position = dropTarget.position + Vector3.up * 0.2f;
+            _todzillaCarryReference.GetComponent<TodzillaController>().enabled = true;
+            _todzillaCarryReference.GetComponent<Rigidbody>().isKinematic = false;
             andThen();
         }
 
