@@ -41,5 +41,7 @@ namespace Coalesce
         TodzillaLeftFoot,
         TodzillaMessy,
         TodzillaCaught,
+
+        NannyFoundMessyBlock,
     }
 }

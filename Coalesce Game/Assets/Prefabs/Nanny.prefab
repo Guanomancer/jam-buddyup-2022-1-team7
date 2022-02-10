@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 9875a245ac49007498213638a307faa1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -108,9 +108,12 @@ GameObject:
   - component: {fileID: 3006910546539781683}
   - component: {fileID: 3006910546539781682}
   - component: {fileID: 3006910546539781693}
+  - component: {fileID: 2146570053558022475}
   - component: {fileID: 3006910546539781692}
   - component: {fileID: 1173130498805165745}
   - component: {fileID: 5977530991033072485}
+  - component: {fileID: 4903543072675844052}
+  - component: {fileID: 337660400}
   m_Layer: 0
   m_Name: Nanny
   m_TagString: Untagged
@@ -174,6 +177,20 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &2146570053558022475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3006910546539781680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4705c738adf21574386fd89a493dc20a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _chaseTarget: {fileID: 0}
+  _stateName: 
 --- !u!114 &3006910546539781692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,6 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _navigationTarget: {fileID: 0}
+  _reachDistance: 1.5
 --- !u!114 &1173130498805165745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,3 +313,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!135 &4903543072675844052
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3006910546539781680}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &337660400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3006910546539781680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc25348e542d7c047886a3c8dc67138b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

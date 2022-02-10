@@ -11,7 +11,7 @@ namespace Coalesce
             switch(eventName)
             {
                 case EventName.TodzillaMessy:
-                    Debug.Log("Nanny says: You've made a mess!");
+                    Debug.Log("Nanny says: You've made a mess!", dispatcher as Object);
                     break;
                 case EventName.TodzillaCaught:
                     Debug.Log("Nanny says: I've got you now.");
@@ -23,6 +23,7 @@ namespace Coalesce
         {
             EventRouter.Subscribe(EventName.TodzillaMessy, this);
             EventRouter.Subscribe(EventName.TodzillaCaught, this);
+            EventRouter.Subscribe(EventName.NannyFoundMessyBlock, this);
         }
     }
 }

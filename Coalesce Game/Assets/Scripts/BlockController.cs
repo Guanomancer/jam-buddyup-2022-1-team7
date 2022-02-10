@@ -4,11 +4,13 @@ using UnityEngine;
 
 namespace Coalesce
 {
-    public class BlockController : MonoBehaviour
+    public class BlockController : MonoBehaviour, IEventDispatcher
     {
         private Vector3 _originalPosition;
         private Quaternion _originalRotation;
         private GameSettings _gameSettings;
+
+        private bool _isMessy;
 
         private void Start()
         {
@@ -24,8 +26,14 @@ namespace Coalesce
         }
 
         public bool IsMessy()
-            => ComputeMagnitudeFromOrigin() >= _gameSettings.MessynessMagnitydeThreshold ||
-                ComputeSpinFromOrigin() >= _gameSettings.MessynessMagnitydeThreshold;
+        {
+            if (_isMessy)
+                return true;
+
+            _isMessy = ComputeMagnitudeFromOrigin() >= _gameSettings.MessynessMagnitydeThreshold ||
+                        ComputeSpinFromOrigin() >= _gameSettings.MessynessMagnitydeThreshold;
+            return _isMessy;
+        }
 
         private float ComputeMagnitudeFromOrigin()
             => (transform.localPosition - _originalPosition).magnitude;

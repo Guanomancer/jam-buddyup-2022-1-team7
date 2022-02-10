@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _messynessMagnitudeThreshold: 0.5
   _messynessSpinThreshold: 30
-  _messynessCalculationTimeDelay: 10
+  _messynessCalculationTimeDelay: 5

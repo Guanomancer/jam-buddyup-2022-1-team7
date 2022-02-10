@@ -52,7 +52,7 @@ namespace Coalesce
                 var block = _rightBlocks[i];
                 if(block.IsMessy())
                 {
-                    EventRouter.Dispatch(EventName.TodzillaMessy, this);
+                    EventRouter.Dispatch(EventName.TodzillaMessy, block as IEventDispatcher);
                     i--;
                     _messyBlocks.Add(block);
                     _rightBlocks.Remove(block);

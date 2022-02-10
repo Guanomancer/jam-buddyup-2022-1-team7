@@ -56269,10 +56269,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3006910545289918893, guid: a9fff780afe230b49a3e07ab97cc805c, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+    - target: {fileID: 2146570053558022475, guid: a9fff780afe230b49a3e07ab97cc805c, type: 3}
+      propertyPath: _chaseTarget
       value: 
-      objectReference: {fileID: 2100000, guid: 9875a245ac49007498213638a307faa1, type: 2}
+      objectReference: {fileID: 1384484678}
     - target: {fileID: 3006910546539781680, guid: a9fff780afe230b49a3e07ab97cc805c, type: 3}
       propertyPath: m_Name
       value: Nanny
@@ -56321,14 +56321,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3006910546539781692, guid: a9fff780afe230b49a3e07ab97cc805c, type: 3}
-      propertyPath: _reachDistance
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3006910546539781692, guid: a9fff780afe230b49a3e07ab97cc805c, type: 3}
-      propertyPath: _navigationTarget
-      value: 
-      objectReference: {fileID: 1384484678}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9fff780afe230b49a3e07ab97cc805c, type: 3}
 --- !u!1001 &1913134549
