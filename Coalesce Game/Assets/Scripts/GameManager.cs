@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Coalesce
 {
-    public class GameManager : SingletonBehaviour<GameManager>
+    public class GameManager : ManagerBase<GameManager>
     {
         [SerializeField]
         private GameSettings _gameSettings;

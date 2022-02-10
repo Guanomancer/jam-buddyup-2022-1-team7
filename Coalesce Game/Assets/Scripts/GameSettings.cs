@@ -16,5 +16,9 @@ namespace Coalesce
         private float _messynessSpinThreshold = 30f;
         public float MessynessSpinThreshold
             => _messynessSpinThreshold;
+        [SerializeField, Tooltip("Time in seconds before messyness calculations start. This will let the blocks settle before calculating which ones have moved.")]
+        private float _messynessCalculationTimeDelay = 5f;
+        public float MessynessCalculationTimeDelay
+            => _messynessCalculationTimeDelay;
     }
 }

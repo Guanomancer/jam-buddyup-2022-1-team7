@@ -4,16 +4,18 @@ using UnityEngine;
 
 namespace Coalesce
 {
-    public class BlockManager : SingletonBehaviour<BlockManager>
+    public class BlockManager : ManagerBase<BlockManager>
     {
         private List<BlockController> _blocks = new List<BlockController>();
         private List<BlockController> _messyBlocks = new List<BlockController>();
         private List<BlockController> _rightBlocks = new List<BlockController>();
+        private GameSettings _gameSettings;
+        private bool _hasSetBlockOrigins;
 
         public void RegisterBlock(BlockController block, bool isMessy = false)
         {
             _blocks.Add(block);
-            (isMessy || block.IsMessy() ? _messyBlocks : _rightBlocks).Add(block);
+            _rightBlocks.Add(block);
         }
 
         public void UnregisterBlock(BlockController block)
@@ -30,14 +32,27 @@ namespace Coalesce
             _rightBlocks.Clear();
         }
 
+        private void Start()
+            => _gameSettings = GameManager.Instance.GameSettings;
+
         private void Update()
         {
-            for(int i = 0; i < _rightBlocks.Count; i++)
+            if (Time.time < _gameSettings.MessynessCalculationTimeDelay)
+                return;
+
+            if (!_hasSetBlockOrigins)
+            {
+                for (int i = 0; i < _blocks.Count; i++)
+                    _blocks[i].SetOriginalState();
+                _hasSetBlockOrigins = true;
+            }
+
+            for (int i = 0; i < _rightBlocks.Count; i++)
             {
                 var block = _rightBlocks[i];
                 if(block.IsMessy())
                 {
-                    Debug.Log("You've made a mess!");
+                    Debug.Log("You've made a mess!", block);
                     i--;
                     _messyBlocks.Add(block);
                     _rightBlocks.Remove(block);

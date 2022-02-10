@@ -14,20 +14,23 @@ namespace Coalesce
         {
             _gameSettings = GameManager.Instance.GameSettings;
 
+            BlockManager.Instance?.RegisterBlock(this, false);
+        }
+
+        public void SetOriginalState()
+        {
             _originalPosition = transform.localPosition;
             _originalRotation = transform.localRotation;
-
-            BlockManager.Instance?.RegisterBlock(this, false);
         }
 
         public bool IsMessy()
             => ComputeMagnitudeFromOrigin() >= _gameSettings.MessynessMagnitydeThreshold ||
-            ComputeSpinFromOrigin() >= _gameSettings.MessynessMagnitydeThreshold;
+                ComputeSpinFromOrigin() >= _gameSettings.MessynessMagnitydeThreshold;
 
         private float ComputeMagnitudeFromOrigin()
-            => (transform.position - _originalPosition).magnitude;
+            => (transform.localPosition - _originalPosition).magnitude;
 
         private float ComputeSpinFromOrigin()
-            => Quaternion.Angle(transform.rotation, _originalRotation);
+            => Quaternion.Angle(transform.localRotation, _originalRotation);
     }
 }
