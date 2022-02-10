@@ -25,8 +25,6 @@ namespace Coalesce
             }
 
             _rotationOffsetX = _cameraBoom.localEulerAngles.x;
-
-            //Cursor.lockState = CursorLockMode.Locked;
         }
 
         public void ToggleCursor()
@@ -51,6 +49,9 @@ namespace Coalesce
 
         public void CameraInput(InputAction.CallbackContext context)
         {
+            if (Cursor.visible)
+                return;
+
             var vector = context.ReadValue<Vector2>();
 
             _rotationX = Mathf.Clamp(_rotationX + vector.y, -_cameraXClampAngle, _cameraXClampAngle);

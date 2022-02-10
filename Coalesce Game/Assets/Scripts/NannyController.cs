@@ -10,7 +10,7 @@ namespace Coalesce
     public class NannyController : MonoBehaviour, IEventDispatcher
     {
         [SerializeField]
-        private float _reachDistance = 1.5f;
+        private float _reachDistance = 2.5f;
         [SerializeField]
         private float _pickupTimePerBlock = 1f;
         [SerializeField]
