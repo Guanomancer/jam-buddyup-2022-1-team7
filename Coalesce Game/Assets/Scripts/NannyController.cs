@@ -11,20 +11,43 @@ namespace Coalesce
     {
         [SerializeField]
         private Transform _navigationTarget;
+        [SerializeField]
+        private float _recomputeRouteDelay = 5f;
+        [SerializeField]
+        private float _recomputeRouteMagnitude = 2.5f;
+        [SerializeField]
+        private float _minimumRecomputeRouteMagnitudeThreshold = 0.5f;
 
         private NavMeshAgent _agent;
         private CharacterController _char;
+
+        private NavMeshPath _path;
+        private NavMeshPath _currentPath;
 
         private void Awake()
         {
             _agent = GetComponent<NavMeshAgent>();
             _char = GetComponent<CharacterController>();
+            _path = new NavMeshPath();
         }
 
         private void FixedUpdate()
         {
-            if (_navigationTarget != null)
-                _agent.SetDestination(_navigationTarget.position);
+            RecomputeRoute();
+        }
+
+        private void RecomputeRoute()
+        {
+            if (_navigationTarget == null)
+                return;
+
+            _path.ClearCorners();
+            if (_agent.CalculatePath(_navigationTarget.position, _path))
+            {
+                _currentPath = _path;
+                _path = new NavMeshPath();
+                _agent.SetPath(_currentPath);
+            }
         }
     }
 }

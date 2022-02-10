@@ -60679,6 +60679,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6910455869915722788, guid: c604f83dad9a36742b0b802893cf24e2, type: 3}
+      propertyPath: m_Mass
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 6910455869915722789, guid: c604f83dad9a36742b0b802893cf24e2, type: 3}
       propertyPath: _crawlSpeed
       value: 2
