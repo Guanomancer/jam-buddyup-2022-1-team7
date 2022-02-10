@@ -6,10 +6,10 @@ namespace Coalesce
 {
     public class TodzillaAnimationEventRouter : MonoBehaviour, IEventDispatcher
     {
-        public void FootstepLeftEvent()
+        public void LeftFoot()
             => EventRouter.Dispatch(EventName.TodzillaLeftFoot, this);
 
-        public void FootstepRightEvent()
+        public void RightFoot()
             => EventRouter.Dispatch(EventName.TodzillaRightFoot, this);
     }
 }

@@ -11,5 +11,8 @@ namespace Coalesce
 
         public static Vector3 Mask(this Vector3 vector, Vector3 mask)
             => new Vector3(vector.x * mask.x, vector.y * mask.y, vector.z * mask.z);
+
+        public static Vector3 MaskXZ(this Vector3 vector)
+            => new Vector3(vector.x, 0, vector.z);
     }
 }

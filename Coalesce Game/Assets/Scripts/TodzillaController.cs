@@ -91,17 +91,22 @@ namespace Coalesce
             if (_crawlInput == Vector3.zero)
                 return;
 
-            var rotation = Quaternion.LookRotation(_cameraBoom.forward);
+            var rotation = Quaternion.LookRotation(_cameraBoom.TransformDirection(_crawlInput));
             var tmpRotation = Quaternion.Slerp(_model.rotation, rotation, Time.deltaTime * _turnSpeedScalar);
-            var eulers = _model.localEulerAngles;
+            var eulers = _model.eulerAngles;
             eulers.y = tmpRotation.eulerAngles.y;
-            _model.localEulerAngles = eulers;
+            _model.eulerAngles = eulers;
         }
 
         private void ApplyMovement()
-            => _velocity = Vector3.SmoothDamp(_velocity, _crawlInput * _crawlSpeed, ref _velocitySmoothDamp, _crawlAccelleration);
+            => _velocity = Vector3.SmoothDamp(
+                _velocity,
+                _cameraBoom.TransformDirection(_crawlInput) * _crawlSpeed,
+                ref _velocitySmoothDamp,
+                _crawlAccelleration
+                );
 
         private void ApplyVelocity()
-            => _body.MovePosition(transform.localPosition + _model.TransformDirection(_velocity) * Time.deltaTime);
+            => _body.MovePosition(transform.localPosition + _velocity * Time.deltaTime);
     }
 }

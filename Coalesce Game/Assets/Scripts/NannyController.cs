@@ -15,6 +15,8 @@ namespace Coalesce
         private float _pickupTimePerBlock = 1f;
         [SerializeField]
         private Transform _todzillaCarryAnchor;
+        [SerializeField]
+        private Transform _todzillaCarryCameraFocusAnchor;
 
         private Transform _todzillaCarryReference;
         private Transform _navigationTarget;
@@ -50,6 +52,7 @@ namespace Coalesce
             _todzillaCarryReference = todzilla;
             _todzillaCarryReference.GetComponent<TodzillaController>().enabled = false;
             _todzillaCarryReference.GetComponent<Rigidbody>().isKinematic = true;
+            _todzillaCarryReference.GetComponent<AutoframeCameraController>().SetDistantTarget(_todzillaCarryCameraFocusAnchor);
             yield return new WaitForSeconds(_pickupTimePerBlock);
             _todzillaCarryReference.parent = _todzillaCarryAnchor;
             _todzillaCarryReference.localPosition = Vector3.zero;
@@ -64,6 +67,7 @@ namespace Coalesce
             _todzillaCarryReference.position = dropTarget.position + Vector3.up * 0.2f;
             _todzillaCarryReference.GetComponent<TodzillaController>().enabled = true;
             _todzillaCarryReference.GetComponent<Rigidbody>().isKinematic = false;
+            _todzillaCarryReference.GetComponent<AutoframeCameraController>().SetDistantTarget(transform);
             andThen();
         }
 
