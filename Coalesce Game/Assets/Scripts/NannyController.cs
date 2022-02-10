@@ -11,13 +11,6 @@ namespace Coalesce
     {
         [SerializeField]
         private Transform _navigationTarget;
-        [SerializeField]
-        private float _recomputeRouteDelay = 5f;
-        [SerializeField]
-        private float _recomputeRouteMagnitude = 2.5f;
-        [SerializeField]
-        private float _minimumRecomputeRouteMagnitudeThreshold = 0.5f;
-
         private NavMeshAgent _agent;
         private CharacterController _char;
 
