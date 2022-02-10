@@ -7,15 +7,20 @@ namespace Coalesce
 {
     [RequireComponent(typeof(NavMeshAgent))]
     [RequireComponent(typeof(CharacterController))]
-    public class NannyController : MonoBehaviour
+    public class NannyController : MonoBehaviour, IEventDispatcher
     {
         [SerializeField]
         private Transform _navigationTarget;
+        [SerializeField]
+        private float _reachDistance = 1.5f;
+
         private NavMeshAgent _agent;
         private CharacterController _char;
 
         private NavMeshPath _path;
         private NavMeshPath _currentPath;
+
+        private bool _couldReachTodzilla;
 
         private void Awake()
         {
@@ -27,6 +32,14 @@ namespace Coalesce
         private void FixedUpdate()
         {
             RecomputeRoute();
+
+            if (!_couldReachTodzilla && CanReacyTodzilla)
+            {
+                _couldReachTodzilla = true;
+                EventRouter.Dispatch(EventName.TodzillaCaught, this);
+            }
+            else if (!CanReacyTodzilla)
+                _couldReachTodzilla = false;
         }
 
         private void RecomputeRoute()
@@ -42,5 +55,9 @@ namespace Coalesce
                 _agent.SetPath(_currentPath);
             }
         }
+
+        private bool CanReacyTodzilla
+            => _navigationTarget.GetComponent<TodzillaController>() != null &&
+                    Vector3.Magnitude(_navigationTarget.position - transform.position) <= _reachDistance;
     }
 }

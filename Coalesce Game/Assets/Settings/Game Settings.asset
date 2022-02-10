@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a6a7d8fc2f794e41889a0c742f5fac4, type: 3}
   m_Name: Game Settings
   m_EditorClassIdentifier: 
-  _messynessMagnitudeThreshold: 1
-  _messynessSpinThreshold: 50
+  _messynessMagnitudeThreshold: 0.5
+  _messynessSpinThreshold: 30
   _messynessCalculationTimeDelay: 10

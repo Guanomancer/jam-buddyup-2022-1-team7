@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Coalesce
 {
-    public class BlockManager : ManagerBase<BlockManager>
+    public class BlockManager : ManagerBase<BlockManager>, IEventDispatcher
     {
         private List<BlockController> _blocks = new List<BlockController>();
         private List<BlockController> _messyBlocks = new List<BlockController>();
@@ -52,7 +52,7 @@ namespace Coalesce
                 var block = _rightBlocks[i];
                 if(block.IsMessy())
                 {
-                    Debug.Log("You've made a mess!", block);
+                    EventRouter.Dispatch(EventName.TodzillaMessy, this);
                     i--;
                     _messyBlocks.Add(block);
                     _rightBlocks.Remove(block);

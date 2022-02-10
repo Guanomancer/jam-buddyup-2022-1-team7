@@ -39,5 +39,7 @@ namespace Coalesce
     {
         TodzillaRightFoot,
         TodzillaLeftFoot,
+        TodzillaMessy,
+        TodzillaCaught,
     }
 }
