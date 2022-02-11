@@ -273,7 +273,7 @@ MonoBehaviour:
   _reachDistance: 1.5
   _pickupTimePerBlock: 1
   _todzillaCarryAnchor: {fileID: 1267419070}
-  _todzillaCarryCameraFocusAnchor: {fileID: 0}
+  _todzillaCarryCameraFocusAnchor: {fileID: 75354228}
 --- !u!114 &1173130498805165745
 MonoBehaviour:
   m_ObjectHideFlags: 0

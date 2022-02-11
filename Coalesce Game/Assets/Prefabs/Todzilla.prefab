@@ -5257,6 +5257,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5773043803689531035}
   - component: {fileID: 6064553095079640342}
+  - component: {fileID: 1662955847}
   m_Layer: 0
   m_Name: Toddler_animating3
   m_TagString: Untagged
@@ -5301,6 +5302,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1662955847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6581492350795607073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8630e9c66e20af149b7abd6c8d246e0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6727609698541226686
 GameObject:
   m_ObjectHideFlags: 0
@@ -5377,6 +5390,7 @@ GameObject:
   - component: {fileID: 6910455869915722808}
   - component: {fileID: 9170107797154989552}
   - component: {fileID: 6910455869915722789}
+  - component: {fileID: 1642823837478953627}
   - component: {fileID: 6910455869915722788}
   - component: {fileID: 1325536828898385839}
   m_Layer: 0
@@ -5462,9 +5476,9 @@ MonoBehaviour:
     m_ActionName: Todzilla/Crawling[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9170107797154989552}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Coalesce.AutoframeCameraController, Assembly-CSharp
-        m_MethodName: ToggleCursor
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5476,6 +5490,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 5febe8c6-74e1-4c33-b029-813fc7fd981b
     m_ActionName: Todzilla/Show/Hide Cursor[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0f106f7e-6480-44c7-8c16-46b896c8a355
+    m_ActionName: Todzilla/DebugBreak[/Keyboard/b]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Todzilla
@@ -5515,6 +5533,19 @@ MonoBehaviour:
   _animatorVelocityWalkThreshold: 0.1
   _leftFootstep: {fileID: 8300000, guid: ec16989401785e54f8714726e2b2e98d, type: 3}
   _rightFootstep: {fileID: 8300000, guid: f68f9a17b59c2c6498f24aa75ba4bf20, type: 3}
+--- !u!114 &1642823837478953627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6910455869915722814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04aa5e410062d6d48ad6f0b0175ef838, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ignoreBlockCollisions: 1
 --- !u!54 &6910455869915722788
 Rigidbody:
   m_ObjectHideFlags: 0

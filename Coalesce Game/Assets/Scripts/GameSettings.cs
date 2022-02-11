@@ -20,5 +20,16 @@ namespace Coalesce
         private float _messynessCalculationTimeDelay = 5f;
         public float MessynessCalculationTimeDelay
             => _messynessCalculationTimeDelay;
+
+        [Header("Sounds")]
+        [SerializeField]
+        private AudioEventCollection _blockCollisionSounds;
+        public AudioEventCollection BlockCollisionSounds
+            => _blockCollisionSounds;
+        [SerializeField]
+        private float _blockCollisionSoundTriggerImpulseThreshold = 3f;
+        public float BlockCollisionSoundTriggerImpulseThreshold
+            => _blockCollisionSoundTriggerImpulseThreshold;
+
     }
 }

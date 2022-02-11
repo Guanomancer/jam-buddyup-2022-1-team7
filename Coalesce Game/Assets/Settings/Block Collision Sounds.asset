@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c6256786509f1d4786b8af0820a3a8e, type: 3}
+  m_Name: Block Collision Sounds
+  m_EditorClassIdentifier: 
+  _audioClips:
+  - {fileID: 8300000, guid: 4dc44e50588d7cb48a8557a3ef86b793, type: 3}
+  - {fileID: 8300000, guid: 142a98bd6a46488468d605e9ffab9fb7, type: 3}
+  - {fileID: 8300000, guid: 471e7ff17c82a174faaae5797c441592, type: 3}
+  - {fileID: 8300000, guid: 9e377b89261075c41b59cbc40e594e73, type: 3}
+  - {fileID: 8300000, guid: 2af8e67568a2f174884e113f4c62658a, type: 3}
+  - {fileID: 8300000, guid: 498f52c32a469f44d9b710f048a9bd31, type: 3}
+  _neverPlayTheSameClipTwice: 1

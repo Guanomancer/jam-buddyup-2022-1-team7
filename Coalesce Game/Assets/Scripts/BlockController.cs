@@ -9,12 +9,14 @@ namespace Coalesce
         private Vector3 _originalPosition;
         private Quaternion _originalRotation;
         private GameSettings _gameSettings;
+        private AudioSource _audio;
 
         private bool _isMessy;
 
         private void Start()
         {
             _gameSettings = GameManager.Instance.GameSettings;
+            _audio = GetComponent<AudioSource>();
 
             BlockManager.Instance?.RegisterBlock(this, false);
         }
