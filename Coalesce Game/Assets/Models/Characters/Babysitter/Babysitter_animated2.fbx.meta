@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: ca8eb306d67abdc48b76e803e6a00617
+guid: 00a70cbf78df948409659443116c0d97
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable:
   - first:
+      74: 3024042657280649508
+    second: rig|NannyPickup
+  - first:
       74: 3088019595371358003
     second: rig|NannyWalk
-  - first:
-      74: 3374748389425109202
-    second: rig|rigAction
   - first:
       74: 484112063041692398
     second: rig|rig|rig|Idle|rig|Idle
