@@ -14,6 +14,12 @@ namespace Coalesce
                 Nanny.GetComponent<PerimeterBlockDetector>().BlocksInReach[0],
                 () => { Nanny.Transition<NannyChaseState>(); }
                 ));
+            Nanny.Animator.SetBool("Pickup", true);
+        }
+
+        public override void OnExit()
+        {
+            Nanny.Animator.SetBool("Pickup", false);
         }
     }
 }

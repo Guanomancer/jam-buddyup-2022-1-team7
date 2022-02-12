@@ -9,6 +9,12 @@ namespace Coalesce
         public override void OnEnter()
         {
             Nanny.GetComponent<NannyController>().SetNavigationTarget(Nanny.RestTarget);
+            Nanny.Animator.SetBool("IsWalking", true);
+        }
+
+        public override void OnExit()
+        {
+            Nanny.Animator.SetBool("IsWalking", false);
         }
 
         public override void OnUpdate()

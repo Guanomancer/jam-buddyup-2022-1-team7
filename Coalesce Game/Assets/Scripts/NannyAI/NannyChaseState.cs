@@ -11,6 +11,7 @@ namespace Coalesce
             EventRouter.Subscribe(EventName.NannyFoundMessyBlock, this);
             EventRouter.Subscribe(EventName.TodzillaCaught, this);
             Nanny.GetComponent<NannyController>().SetNavigationTarget(Nanny.ChaseTarget);
+            Nanny.Animator.SetBool("IsWalking", true);
         }
 
         public override void OnExit()
@@ -18,6 +19,7 @@ namespace Coalesce
             EventRouter.Unsubscribe(EventName.NannyFoundMessyBlock, this);
             EventRouter.Unsubscribe(EventName.TodzillaCaught, this);
             Nanny.GetComponent<NannyController>().SetNavigationTarget(null);
+            Nanny.Animator.SetBool("IsWalking", false);
         }
 
         public override void OnUpdate()

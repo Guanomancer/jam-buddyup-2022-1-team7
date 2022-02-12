@@ -27,6 +27,9 @@ namespace Coalesce
         private NannyStateBase _state;
         private NannyStateBase[] _states;
 
+        private Animator _animator;
+        public Animator Animator => _animator;
+
         public void Transition(NannyStateBase state)
         {
             _state?.OnExit();
@@ -53,6 +56,8 @@ namespace Coalesce
 
         private void Start()
         {
+            _animator = GetComponentInChildren<Animator>();
+
             _states = new NannyStateBase[]
             {
                 new NannyIdleState(),

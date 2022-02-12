@@ -14,6 +14,12 @@ namespace Coalesce
                 Nanny.ChaseTarget,
                 () => { Nanny.Transition<NannyCarryTodzillaState>(); }
                 ));
+            Nanny.Animator.SetBool("Pickup", true);
+        }
+
+        public override void OnExit()
+        {
+            Nanny.Animator.SetBool("Pickup", false);
         }
     }
 }
