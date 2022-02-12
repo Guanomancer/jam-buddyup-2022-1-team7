@@ -6,11 +6,11 @@
             "id": "73d16e74-8229-4fe2-adcf-734a9fda5f8a",
             "actions": [
                 {
-                    "name": "Camera",
+                    "name": "MousePosition",
                     "type": "Value",
                     "id": "bc2caf40-cb5e-4bf4-8906-7db67592e073",
                     "expectedControlType": "Vector2",
-                    "processors": "ScaleVector2(x=0.1,y=0.1)",
+                    "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
                 },
@@ -46,11 +46,11 @@
                 {
                     "name": "",
                     "id": "dfd7f2c5-7ff7-4a6a-9119-3a034502177d",
-                    "path": "<Mouse>/delta",
+                    "path": "<Mouse>/position",
                     "interactions": "",
-                    "processors": "InvertVector2(invertX=false)",
+                    "processors": "",
                     "groups": "",
-                    "action": "Camera",
+                    "action": "MousePosition",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
