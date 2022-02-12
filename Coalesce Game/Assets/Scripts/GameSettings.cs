@@ -30,6 +30,18 @@ namespace Coalesce
         private float _blockCollisionSoundTriggerImpulseThreshold = 3f;
         public float BlockCollisionSoundTriggerImpulseThreshold
             => _blockCollisionSoundTriggerImpulseThreshold;
+        [SerializeField]
+        private float _blockCollisionSoundTriggerVelocityThreshold = 0.5f;
+        public float BlockCollisionSoundTriggerVelocityThreshold
+            => _blockCollisionSoundTriggerVelocityThreshold;
+        [SerializeField]
+        private float _blockCollisionSoundTriggerAngularVelocityThreshold = 0.5f;
+        public float BlockCollisionSoundTriggerAngularVelocityThreshold
+            => _blockCollisionSoundTriggerAngularVelocityThreshold;
 
+        [SerializeField]
+        private AnimationCurve _blockCollisionSoundCurve;
+        public AnimationCurve BlockCollisionSoundCurve
+            => _blockCollisionSoundCurve;
     }
 }

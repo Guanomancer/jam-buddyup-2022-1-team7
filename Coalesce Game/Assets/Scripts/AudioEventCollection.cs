@@ -27,7 +27,7 @@ namespace Coalesce
                     do
                     {
                         var index = Random.Range(0, _audioClips.Length);
-                        if (index != _lastIndex)
+                        if (index != _lastIndex || _neverPlayTheSameClipTwice)
                         {
                             _lastIndex = index;
                             return _audioClips[index];

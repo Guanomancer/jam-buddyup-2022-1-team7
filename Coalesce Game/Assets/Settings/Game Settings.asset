@@ -16,4 +16,30 @@ MonoBehaviour:
   _messynessSpinThreshold: 30
   _messynessCalculationTimeDelay: 5
   _blockCollisionSounds: {fileID: 11400000, guid: 61bfb6c1928bb6a48943f38af527ce6b, type: 2}
-  _blockCollisionSoundTriggerImpulseThreshold: 1.8
+  _blockCollisionSoundTriggerImpulseThreshold: 3
+  _blockCollisionSoundTriggerVelocityThreshold: 1.5
+  _blockCollisionSoundTriggerAngularVelocityThreshold: 100
+  _blockCollisionSoundCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0060637225
+      value: 0.20528199
+      inSlope: 0.13772778
+      outSlope: 0.13772778
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.08054711
+    - serializedVersion: 3
+      time: 3.9899292
+      value: 0.9806824
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
