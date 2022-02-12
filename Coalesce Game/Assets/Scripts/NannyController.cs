@@ -42,8 +42,11 @@ namespace Coalesce
         public IEnumerator PickupBlock(BlockController block, System.Action andThen)
         {
             yield return new WaitForSeconds(_pickupTimePerBlock);
-            GetComponent<PerimeterBlockDetector>().RemoveBlockFromReachList(block);
-            Destroy(block.gameObject);
+            if (block != null)
+            {
+                GetComponent<PerimeterBlockDetector>().RemoveBlockFromReachList(block);
+                Destroy(block.gameObject);
+            }
             andThen();
         }
 
