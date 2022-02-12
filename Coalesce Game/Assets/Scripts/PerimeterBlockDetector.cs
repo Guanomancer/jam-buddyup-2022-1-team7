@@ -32,7 +32,7 @@ namespace Coalesce
 
         private bool ColliderToMessyBlock(Collider collider, out BlockController block)
         {
-            block = collider.GetComponent<BlockController>();
+            block = collider.GetComponentInParent<BlockController>();
             return block != null && block.IsMessy();
         }
     }
