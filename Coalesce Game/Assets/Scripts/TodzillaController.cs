@@ -58,6 +58,7 @@ namespace Coalesce
         {
             EventRouter.Unsubscribe(EventName.TodzillaRightFoot, this);
             EventRouter.Unsubscribe(EventName.TodzillaLeftFoot, this);
+            _animator.SetBool("IsWalking", false);
         }
 
         public void OnEvent(EventName eventName, IEventDispatcher dispatcher)

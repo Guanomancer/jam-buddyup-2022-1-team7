@@ -3044,6 +3044,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 163921784450788846, guid: c604f83dad9a36742b0b802893cf24e2, type: 3}
+      propertyPath: _minDistanceFromZilla
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6910455869915722809, guid: c604f83dad9a36742b0b802893cf24e2, type: 3}
       propertyPath: m_RootOrder
       value: 2

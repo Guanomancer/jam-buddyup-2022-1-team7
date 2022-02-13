@@ -9,6 +9,8 @@ namespace Coalesce
     {
         [SerializeField]
         private Camera _camera;
+        [SerializeField]
+        private float _minDistanceFromZilla = 1.5f;
 
         private float _distance;
 
@@ -22,7 +24,10 @@ namespace Coalesce
             var ray = new Ray(transform.position, -_camera.transform.forward);
             var distance = _distance;
             if (Physics.Raycast(ray, out RaycastHit hitInfo, 10f))
-                distance = Mathf.Max(_distance, -hitInfo.distance);
+                distance =
+                    Mathf.Min(-_minDistanceFromZilla,
+                        Mathf.Max(_distance, -hitInfo.distance)
+                    );
             var position = _camera.transform.localPosition;
             position.z = distance;
             _camera.transform.localPosition = position;
