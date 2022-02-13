@@ -29,6 +29,8 @@ namespace Coalesce
 
         private bool _couldReachTodzilla;
 
+        private PerimeterBlockDetector _blockDetector;
+
         public void SetNavigationTarget(Transform navigationTarget)
         {
             _navigationTarget = navigationTarget;
@@ -44,10 +46,39 @@ namespace Coalesce
             yield return new WaitForSeconds(_pickupTimePerBlock);
             if (block != null)
             {
-                GetComponent<PerimeterBlockDetector>().RemoveBlockFromReachList(block);
-                Destroy(block.gameObject);
+                var count = 0;
+                var currentBlock = block;
+                do
+                {
+                    _blockDetector.RemoveBlockFromReachList(currentBlock);
+                    DestroyImmediate(currentBlock.gameObject);
+                    count++;
+                    currentBlock = GetBlockClosestTo(transform.position);
+                } while (currentBlock != null && count < GameManager.Instance.GameSettings.MaxBlocksToPickUpAtOnce);
             }
             andThen();
+        }
+
+        private BlockController GetBlockClosestTo(Vector3 point)
+        {
+            var blocks = Physics.OverlapSphere(point, GameManager.Instance.GameSettings.MessyBlockDetectionRadius);
+            
+            float closestSqrMagnitude = 100000f;
+            int blockIndex = -1;
+            int cnt = 0;
+            for (int i = 0; i < blocks.Length; i++)
+            {
+                if (blocks[i].transform.parent == null || blocks[i].transform.parent.GetComponent<BlockController>() == null)
+                    continue;
+                cnt++;
+                float sqrMag = (blocks[i].transform.position - point).sqrMagnitude;
+                if (sqrMag <= closestSqrMagnitude)
+                {
+                    closestSqrMagnitude = sqrMag;
+                    blockIndex = i;
+                }
+            }
+            return blockIndex == -1 ? null : blocks[blockIndex].transform.parent.GetComponent<BlockController>();
         }
 
         public IEnumerator PickupTodzilla(Transform todzilla, System.Action andThen)
@@ -79,6 +110,7 @@ namespace Coalesce
             _agent = GetComponent<NavMeshAgent>();
             _char = GetComponent<CharacterController>();
             _path = new NavMeshPath();
+            _blockDetector = GetComponent<PerimeterBlockDetector>();
         }
 
         private void FixedUpdate()

@@ -47,7 +47,6 @@ namespace Coalesce
                 _gameSettings.BlockCollisionSoundCurve.Evaluate(
                     velocity - _gameSettings.BlockCollisionSoundTriggerVelocityThreshold),
                 0f, 1f);
-            Debug.Log(volumeScalar);
             _lastCollisionTime = Time.time;
             _audio.PlayOneShot(_gameSettings.BlockCollisionSounds.GetRandom(), volumeScalar);
         }

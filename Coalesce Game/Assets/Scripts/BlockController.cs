@@ -21,6 +21,9 @@ namespace Coalesce
             BlockManager.Instance?.RegisterBlock(this, false);
         }
 
+        private void OnDestroy()
+            => BlockManager.Instance.UnregisterBlock(this);
+
         public void SetOriginalState()
         {
             _originalPosition = transform.localPosition;

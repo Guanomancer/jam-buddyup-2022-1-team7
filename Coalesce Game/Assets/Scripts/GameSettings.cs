@@ -43,5 +43,15 @@ namespace Coalesce
         private AnimationCurve _blockCollisionSoundCurve;
         public AnimationCurve BlockCollisionSoundCurve
             => _blockCollisionSoundCurve;
+
+        [Header("Nanny")]
+        [SerializeField]
+        private float _messyBlockDetectionRadius = 2f;
+        public float MessyBlockDetectionRadius
+            => _messyBlockDetectionRadius;
+        [SerializeField]
+        private int _maxBlocksToPickUpAtOnce = 5;
+        public int MaxBlocksToPickUpAtOnce
+            => _maxBlocksToPickUpAtOnce;
     }
 }

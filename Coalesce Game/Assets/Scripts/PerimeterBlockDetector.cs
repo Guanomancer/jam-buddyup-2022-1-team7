@@ -13,6 +13,25 @@ namespace Coalesce
         public void RemoveBlockFromReachList(BlockController block)
             => _blocksInReach.Remove(block);
 
+        public BlockController GetBlockClosestTo(Vector3 point)
+        {
+            if (_blocksInReach.Count == 0)
+                return null;
+
+            float closestSqrMagnitude = float.MaxValue;
+            int blockIndex = 0;
+            for(int  i= 0; i < _blocksInReach.Count; i++)
+            {
+                float sqrMag = (_blocksInReach[i].transform.position - point).sqrMagnitude;
+                if(sqrMag <= closestSqrMagnitude)
+                {
+                    closestSqrMagnitude = sqrMag;
+                    blockIndex = i;
+                }
+            }
+            return _blocksInReach[blockIndex];
+        }
+
         private void OnTriggerEnter(Collider other)
         {
             if (!ColliderToMessyBlock(other, out BlockController block))
