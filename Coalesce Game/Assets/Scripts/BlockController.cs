@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace Coalesce
 {
@@ -37,6 +38,8 @@ namespace Coalesce
 
             _isMessy = ComputeMagnitudeFromOrigin() >= _gameSettings.MessynessMagnitydeThreshold ||
                         ComputeSpinFromOrigin() >= _gameSettings.MessynessMagnitydeThreshold;
+            GetComponentInChildren<NavMeshObstacle>().enabled = !_isMessy;
+
             return _isMessy;
         }
 
