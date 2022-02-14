@@ -11,10 +11,10 @@ namespace Coalesce
             switch(eventName)
             {
                 case EventName.TodzillaMessy:
-                    Debug.Log("Nanny says: You've made a mess!", dispatcher as Object);
+                    //Debug.Log("Nanny says: You've made a mess!", dispatcher as Object);
                     break;
                 case EventName.TodzillaCaught:
-                    Debug.Log("Nanny says: I've got you now.");
+                    //Debug.Log("Nanny says: I've got you now.");
                     break;
             }
         }
