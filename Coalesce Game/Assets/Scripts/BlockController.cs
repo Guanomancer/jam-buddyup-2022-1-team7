@@ -7,6 +7,9 @@ namespace Coalesce
 {
     public class BlockController : MonoBehaviour, IEventDispatcher
     {
+        [SerializeField]
+        private bool _countTowardsScore = true;
+
         private Vector3 _originalPosition;
         private Quaternion _originalRotation;
         private GameSettings _gameSettings;
@@ -19,11 +22,15 @@ namespace Coalesce
             _gameSettings = GameManager.Instance.GameSettings;
             _audio = GetComponent<AudioSource>();
 
-            BlockManager.Instance?.RegisterBlock(this, false);
+            if(_countTowardsScore)
+                BlockManager.Instance?.RegisterBlock(this, false);
         }
 
         private void OnDestroy()
-            => BlockManager.Instance.UnregisterBlock(this);
+        {
+            if(_countTowardsScore)
+                BlockManager.Instance.UnregisterBlock(this);
+        }
 
         public void SetOriginalState()
         {

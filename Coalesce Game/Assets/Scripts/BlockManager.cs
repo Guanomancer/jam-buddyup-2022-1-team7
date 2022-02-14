@@ -60,11 +60,10 @@ namespace Coalesce
                 {
                     EventRouter.Dispatch(EventName.TodzillaMessy, block as IEventDispatcher);
                     i--;
-                    Debug.Log("Block is now messy.", block);
                     _messyBlocks.Add(block);
                     _rightBlocks.Remove(block);
+                    Debug.Log(_messyBlocks.Count + " blocks messy. Blocks remaning: " + _rightBlocks.Count + ". Total blocks: " + _blocks.Count);
                 }
-            
             }
 
             if (_destructometer == null)

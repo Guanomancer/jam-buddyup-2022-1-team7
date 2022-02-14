@@ -773,6 +773,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 2074123033, guid: dba564c98e53de243b0c6c7a667ef86c, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3875623634350583311, guid: dba564c98e53de243b0c6c7a667ef86c, type: 3}
       propertyPath: m_RootOrder
       value: 513
@@ -850,6 +854,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 532923165, guid: 78a34922a14948246a6d93bcd77a4d40, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8211580315886851013, guid: 78a34922a14948246a6d93bcd77a4d40, type: 3}
       propertyPath: m_Name
       value: WASDHI Letters Green (5)
@@ -2116,6 +2124,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 1621482693, guid: a7372be27351fbc49a22983f2e45a011, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1712025584351529155, guid: a7372be27351fbc49a22983f2e45a011, type: 3}
       propertyPath: m_RootOrder
       value: 568
@@ -2173,6 +2185,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 1621482693, guid: a7372be27351fbc49a22983f2e45a011, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1712025584351529155, guid: a7372be27351fbc49a22983f2e45a011, type: 3}
       propertyPath: m_RootOrder
       value: 517
@@ -3157,6 +3173,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 1912980885, guid: e55e905b05c951d40ade46fd0ab89b25, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 502261722164150803, guid: e55e905b05c951d40ade46fd0ab89b25, type: 3}
       propertyPath: m_Name
       value: Teal Cylinder (6)
@@ -4416,6 +4436,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 532923165, guid: 78a34922a14948246a6d93bcd77a4d40, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8211580315886851013, guid: 78a34922a14948246a6d93bcd77a4d40, type: 3}
       propertyPath: m_Name
       value: WASDHI Letters Green (4)
@@ -5138,6 +5162,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 1325129820, guid: 28d0ae8a68a6e234bbe7a9cd99507d47, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2828867022872567556, guid: 28d0ae8a68a6e234bbe7a9cd99507d47, type: 3}
       propertyPath: m_Name
       value: Large Window Red (10)
@@ -6526,6 +6554,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 1325129820, guid: 28d0ae8a68a6e234bbe7a9cd99507d47, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2828867022872567556, guid: 28d0ae8a68a6e234bbe7a9cd99507d47, type: 3}
       propertyPath: m_Name
       value: Large Window Red (16)
@@ -6887,6 +6919,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 1621482693, guid: a7372be27351fbc49a22983f2e45a011, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1712025584351529155, guid: a7372be27351fbc49a22983f2e45a011, type: 3}
       propertyPath: m_RootOrder
       value: 522
@@ -6944,6 +6980,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 532923165, guid: 78a34922a14948246a6d93bcd77a4d40, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8211580315886851013, guid: 78a34922a14948246a6d93bcd77a4d40, type: 3}
       propertyPath: m_Name
       value: WASDHI Letters Green
@@ -8226,6 +8266,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 532923165, guid: 78a34922a14948246a6d93bcd77a4d40, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8211580315886851013, guid: 78a34922a14948246a6d93bcd77a4d40, type: 3}
       propertyPath: m_Name
       value: WASDHI Letters Green (1)
@@ -10091,6 +10135,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 150370608, guid: 4e38f40b6ec03df46a80d5c82e84d1c8, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5894668037540497872, guid: 4e38f40b6ec03df46a80d5c82e84d1c8, type: 3}
       propertyPath: m_Name
       value: WASDHI Letters Red
@@ -11029,6 +11077,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 150370608, guid: 4e38f40b6ec03df46a80d5c82e84d1c8, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5894668037540497872, guid: 4e38f40b6ec03df46a80d5c82e84d1c8, type: 3}
       propertyPath: m_Name
       value: WASDHI Letters Red (3)
@@ -11751,6 +11803,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 1621482693, guid: a7372be27351fbc49a22983f2e45a011, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1712025584351529155, guid: a7372be27351fbc49a22983f2e45a011, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -12046,6 +12102,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 1621482693, guid: a7372be27351fbc49a22983f2e45a011, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1712025584351529155, guid: a7372be27351fbc49a22983f2e45a011, type: 3}
       propertyPath: m_RootOrder
       value: 521
@@ -13181,6 +13241,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 1912980885, guid: e55e905b05c951d40ade46fd0ab89b25, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 502261722164150803, guid: e55e905b05c951d40ade46fd0ab89b25, type: 3}
       propertyPath: m_Name
       value: Teal Cylinder (11)
@@ -14340,6 +14404,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 2074123033, guid: dba564c98e53de243b0c6c7a667ef86c, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3875623634350583311, guid: dba564c98e53de243b0c6c7a667ef86c, type: 3}
       propertyPath: m_RootOrder
       value: 528
@@ -15438,6 +15506,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 1325129820, guid: 28d0ae8a68a6e234bbe7a9cd99507d47, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2828867022872567556, guid: 28d0ae8a68a6e234bbe7a9cd99507d47, type: 3}
       propertyPath: m_Name
       value: Large Window Red (12)
@@ -16003,6 +16075,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 1621482693, guid: a7372be27351fbc49a22983f2e45a011, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1712025584351529155, guid: a7372be27351fbc49a22983f2e45a011, type: 3}
       propertyPath: m_RootOrder
       value: 516
@@ -16610,6 +16686,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 1325129820, guid: 28d0ae8a68a6e234bbe7a9cd99507d47, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2828867022872567556, guid: 28d0ae8a68a6e234bbe7a9cd99507d47, type: 3}
       propertyPath: m_Name
       value: Large Window Red (14)
@@ -18226,6 +18306,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 2074123033, guid: dba564c98e53de243b0c6c7a667ef86c, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3875623634350583311, guid: dba564c98e53de243b0c6c7a667ef86c, type: 3}
       propertyPath: m_RootOrder
       value: 512
@@ -19781,6 +19865,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 150370608, guid: 4e38f40b6ec03df46a80d5c82e84d1c8, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5894668037540497872, guid: 4e38f40b6ec03df46a80d5c82e84d1c8, type: 3}
       propertyPath: m_Name
       value: WASDHI Letters Red (6)
@@ -24235,6 +24323,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 532923165, guid: 78a34922a14948246a6d93bcd77a4d40, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8211580315886851013, guid: 78a34922a14948246a6d93bcd77a4d40, type: 3}
       propertyPath: m_Name
       value: WASDHI Letters Green (3)
@@ -26093,6 +26185,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 1912980885, guid: e55e905b05c951d40ade46fd0ab89b25, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 502261722164150803, guid: e55e905b05c951d40ade46fd0ab89b25, type: 3}
       propertyPath: m_Name
       value: Teal Cylinder (12)
@@ -26210,6 +26306,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 532923165, guid: 78a34922a14948246a6d93bcd77a4d40, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8211580315886851013, guid: 78a34922a14948246a6d93bcd77a4d40, type: 3}
       propertyPath: m_Name
       value: WASDHI Letters Green (8)
@@ -27052,6 +27152,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 532923165, guid: 78a34922a14948246a6d93bcd77a4d40, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8211580315886851013, guid: 78a34922a14948246a6d93bcd77a4d40, type: 3}
       propertyPath: m_Name
       value: WASDHI Letters Green (7)
@@ -27109,6 +27213,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 1912980885, guid: e55e905b05c951d40ade46fd0ab89b25, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 502261722164150803, guid: e55e905b05c951d40ade46fd0ab89b25, type: 3}
       propertyPath: m_Name
       value: Teal Cylinder (09)
@@ -28325,6 +28433,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 1325129820, guid: 28d0ae8a68a6e234bbe7a9cd99507d47, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2828867022872567556, guid: 28d0ae8a68a6e234bbe7a9cd99507d47, type: 3}
       propertyPath: m_Name
       value: Large Window Red (15)
@@ -28521,6 +28633,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 2074123033, guid: dba564c98e53de243b0c6c7a667ef86c, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3875623634350583311, guid: dba564c98e53de243b0c6c7a667ef86c, type: 3}
       propertyPath: m_RootOrder
       value: 527
@@ -29614,6 +29730,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 1912980885, guid: e55e905b05c951d40ade46fd0ab89b25, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 502261722164150803, guid: e55e905b05c951d40ade46fd0ab89b25, type: 3}
       propertyPath: m_Name
       value: Teal Cylinder (07)
@@ -30187,6 +30307,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 150370608, guid: 4e38f40b6ec03df46a80d5c82e84d1c8, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5894668037540497872, guid: 4e38f40b6ec03df46a80d5c82e84d1c8, type: 3}
       propertyPath: m_Name
       value: WASDHI Letters Red (1)
@@ -30440,6 +30564,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 2074123033, guid: dba564c98e53de243b0c6c7a667ef86c, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3875623634350583311, guid: dba564c98e53de243b0c6c7a667ef86c, type: 3}
       propertyPath: m_RootOrder
       value: 524
@@ -30697,6 +30825,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 150370608, guid: 4e38f40b6ec03df46a80d5c82e84d1c8, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5894668037540497872, guid: 4e38f40b6ec03df46a80d5c82e84d1c8, type: 3}
       propertyPath: m_Name
       value: WASDHI Letters Red (4)
@@ -31677,6 +31809,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 532923165, guid: 78a34922a14948246a6d93bcd77a4d40, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8211580315886851013, guid: 78a34922a14948246a6d93bcd77a4d40, type: 3}
       propertyPath: m_Name
       value: WASDHI Letters Green (2)
@@ -32645,6 +32781,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 1621482693, guid: a7372be27351fbc49a22983f2e45a011, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1712025584351529155, guid: a7372be27351fbc49a22983f2e45a011, type: 3}
       propertyPath: m_RootOrder
       value: 565
@@ -33213,6 +33353,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 1621482693, guid: a7372be27351fbc49a22983f2e45a011, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1712025584351529155, guid: a7372be27351fbc49a22983f2e45a011, type: 3}
       propertyPath: m_RootOrder
       value: 509
@@ -33394,6 +33538,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 150370608, guid: 4e38f40b6ec03df46a80d5c82e84d1c8, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5894668037540497872, guid: 4e38f40b6ec03df46a80d5c82e84d1c8, type: 3}
       propertyPath: m_Name
       value: WASDHI Letters Red (2)
@@ -34531,6 +34679,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 2074123033, guid: dba564c98e53de243b0c6c7a667ef86c, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3875623634350583311, guid: dba564c98e53de243b0c6c7a667ef86c, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -35225,6 +35377,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 2074123033, guid: dba564c98e53de243b0c6c7a667ef86c, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3875623634350583311, guid: dba564c98e53de243b0c6c7a667ef86c, type: 3}
       propertyPath: m_RootOrder
       value: 567
@@ -36023,6 +36179,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 150370608, guid: 4e38f40b6ec03df46a80d5c82e84d1c8, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5894668037540497872, guid: 4e38f40b6ec03df46a80d5c82e84d1c8, type: 3}
       propertyPath: m_Name
       value: WASDHI Letters Red (7)
@@ -37556,6 +37716,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 150370608, guid: 4e38f40b6ec03df46a80d5c82e84d1c8, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5894668037540497872, guid: 4e38f40b6ec03df46a80d5c82e84d1c8, type: 3}
       propertyPath: m_Name
       value: WASDHI Letters Red (5)
@@ -40058,6 +40222,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 532923165, guid: 78a34922a14948246a6d93bcd77a4d40, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8211580315886851013, guid: 78a34922a14948246a6d93bcd77a4d40, type: 3}
       propertyPath: m_Name
       value: WASDHI Letters Green (6)
@@ -41715,6 +41883,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 1912980885, guid: e55e905b05c951d40ade46fd0ab89b25, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 502261722164150803, guid: e55e905b05c951d40ade46fd0ab89b25, type: 3}
       propertyPath: m_Name
       value: Teal Cylinder (8)
@@ -42304,6 +42476,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 2074123033, guid: dba564c98e53de243b0c6c7a667ef86c, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3875623634350583311, guid: dba564c98e53de243b0c6c7a667ef86c, type: 3}
       propertyPath: m_RootOrder
       value: 520
@@ -42628,6 +42804,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 1325129820, guid: 28d0ae8a68a6e234bbe7a9cd99507d47, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2828867022872567556, guid: 28d0ae8a68a6e234bbe7a9cd99507d47, type: 3}
       propertyPath: m_Name
       value: Large Window Red (11)
@@ -42742,6 +42922,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 1325129820, guid: 28d0ae8a68a6e234bbe7a9cd99507d47, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2828867022872567556, guid: 28d0ae8a68a6e234bbe7a9cd99507d47, type: 3}
       propertyPath: m_Name
       value: Large Window Red (17)
@@ -42799,6 +42983,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 1325129820, guid: 28d0ae8a68a6e234bbe7a9cd99507d47, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2828867022872567556, guid: 28d0ae8a68a6e234bbe7a9cd99507d47, type: 3}
       propertyPath: m_Name
       value: Large Window Red (9)
@@ -43832,6 +44020,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 1912980885, guid: e55e905b05c951d40ade46fd0ab89b25, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 502261722164150803, guid: e55e905b05c951d40ade46fd0ab89b25, type: 3}
       propertyPath: m_Name
       value: Teal Cylinder (10)
@@ -44822,6 +45014,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 1325129820, guid: 28d0ae8a68a6e234bbe7a9cd99507d47, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2828867022872567556, guid: 28d0ae8a68a6e234bbe7a9cd99507d47, type: 3}
       propertyPath: m_Name
       value: Large Window Red (13)
@@ -45572,6 +45768,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 1912980885, guid: e55e905b05c951d40ade46fd0ab89b25, type: 3}
+      propertyPath: _countTowardsScore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 502261722164150803, guid: e55e905b05c951d40ade46fd0ab89b25, type: 3}
       propertyPath: m_Name
       value: Teal Cylinder (14)
