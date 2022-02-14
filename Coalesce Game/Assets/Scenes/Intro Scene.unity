@@ -1375,7 +1375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _displayTime: 1
   _nextElement: {fileID: 0}
-  _nextScene: 2
+  _nextScene: 1
 --- !u!1 &1853315388
 GameObject:
   m_ObjectHideFlags: 0
