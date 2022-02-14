@@ -26,8 +26,13 @@ namespace Coalesce
                 else
                     _scenes.Add(scene.SceneIndex, scene);
             }
-            _currentScene = _scenes[SceneManager.GetActiveScene().buildIndex];
-            _currentScene.Enter();
+            if (!_scenes.ContainsKey(SceneManager.GetActiveScene().buildIndex))
+                Debug.LogWarning("Active scene is unknown.", this);
+            else
+            {
+                _currentScene = _scenes[SceneManager.GetActiveScene().buildIndex];
+                _currentScene.Enter();
+            }
         }
 
         public void TransitionScene(int sceneIndex)

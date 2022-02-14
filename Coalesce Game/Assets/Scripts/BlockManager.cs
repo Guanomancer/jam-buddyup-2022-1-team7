@@ -11,9 +11,15 @@ namespace Coalesce
         private List<BlockController> _rightBlocks = new List<BlockController>();
         private GameSettings _gameSettings;
         private bool _hasSetBlockOrigins;
+        private DestructometerController _destructometer;
+        private int _totalBlocks;
+        
+        public float Destruction
+            => (float)_messyBlocks.Count / _totalBlocks;
 
         public void RegisterBlock(BlockController block, bool isMessy = false)
         {
+            _totalBlocks++;
             _blocks.Add(block);
             _rightBlocks.Add(block);
         }
@@ -54,10 +60,17 @@ namespace Coalesce
                 {
                     EventRouter.Dispatch(EventName.TodzillaMessy, block as IEventDispatcher);
                     i--;
+                    Debug.Log("Block is now messy.", block);
                     _messyBlocks.Add(block);
                     _rightBlocks.Remove(block);
                 }
+            
             }
+
+            if (_destructometer == null)
+                _destructometer = FindObjectOfType<DestructometerController>();
+            else
+                _destructometer.Destruction = 1f - Destruction;
         }
     }
 }
