@@ -10,6 +10,14 @@ namespace Coalesce
         public static T Instance { get; private set; }
 
         private void Awake()
-            => Instance = this as T;
+        {
+            if(Instance != null)
+            {
+                Destroy(this);
+                return;
+            }
+            DontDestroyOnLoad(gameObject);
+            Instance = this as T;
+        }
     }
 }

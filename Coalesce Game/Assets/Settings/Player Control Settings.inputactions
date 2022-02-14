@@ -132,6 +132,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Cut Scene",
+            "id": "2146de64-a557-442a-90a5-8f62bc1a3482",
+            "actions": [
+                {
+                    "name": "Skip",
+                    "type": "Button",
+                    "id": "5b70d636-9e4c-44db-8717-a1b13665dbfa",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "5faf3e23-f5c2-4975-8365-7365464c7911",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
