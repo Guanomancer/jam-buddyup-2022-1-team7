@@ -68,7 +68,10 @@ namespace Coalesce
             int cnt = 0;
             for (int i = 0; i < blocks.Length; i++)
             {
-                if (blocks[i].transform.parent == null || blocks[i].transform.parent.GetComponent<BlockController>() == null)
+                if (blocks[i].transform.parent == null ||
+                    blocks[i].transform.parent.GetComponent<BlockController>() == null ||
+                    !blocks[i].transform.parent.GetComponent<BlockController>().IsMessy()
+                    )
                     continue;
                 cnt++;
                 float sqrMag = (blocks[i].transform.position - point).sqrMagnitude;
