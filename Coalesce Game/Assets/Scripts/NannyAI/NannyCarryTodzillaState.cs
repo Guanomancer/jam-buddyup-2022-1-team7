@@ -19,7 +19,7 @@ namespace Coalesce
 
         public override void OnUpdate()
         {
-            if (Time.time < StateEntryTime + 1f)
+            if (Time.time < StateEntryTime + 3f)
                 return;
 
             if (Nanny.GetComponent<NannyController>().DistanceToTarget < 1.5f)

@@ -27,8 +27,8 @@ namespace Coalesce
 
         public void SetOriginalState()
         {
-            _originalPosition = transform.localPosition;
-            _originalRotation = transform.localRotation;
+            _originalPosition = transform.position;
+            _originalRotation = transform.rotation;
         }
 
         public bool IsMessy()
@@ -44,9 +44,9 @@ namespace Coalesce
         }
 
         private float ComputeMagnitudeFromOrigin()
-            => (transform.localPosition - _originalPosition).magnitude;
+            => (transform.position - _originalPosition).magnitude;
 
         private float ComputeSpinFromOrigin()
-            => Quaternion.Angle(transform.localRotation, _originalRotation);
+            => Quaternion.Angle(transform.rotation, _originalRotation);
     }
 }
