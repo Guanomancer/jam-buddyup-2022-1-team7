@@ -40,6 +40,11 @@ namespace Coalesce
                         ComputeSpinFromOrigin() >= _gameSettings.MessynessMagnitydeThreshold;
             GetComponentInChildren<NavMeshObstacle>().enabled = !_isMessy;
 
+#if UNITY_EDITOR
+            if (_isMessy)
+                GetComponentInChildren<MeshRenderer>().material.SetColor("_Highlight_Color", Color.red);
+#endif
+
             return _isMessy;
         }
 
