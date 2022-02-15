@@ -45375,6 +45375,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _size: {x: 1, y: 5, z: 2.93}
   _object: {fileID: 171479887}
+  _onTrigger:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1843316170
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47047,6 +47050,10 @@ PrefabInstance:
     - target: {fileID: 4903543072675844052, guid: a9fff780afe230b49a3e07ab97cc805c, type: 3}
       propertyPath: m_Radius
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5977530991033072485, guid: a9fff780afe230b49a3e07ab97cc805c, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9fff780afe230b49a3e07ab97cc805c, type: 3}
