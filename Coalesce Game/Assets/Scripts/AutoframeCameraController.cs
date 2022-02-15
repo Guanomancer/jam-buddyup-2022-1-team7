@@ -11,10 +11,18 @@ namespace Coalesce
         private Transform _cameraBoom;
         [SerializeField]
         private Transform _distantTarget;
-        public Transform SetDistantTarget(Transform target)
-            => _distantTarget = target;
+        public Transform SetDistantTarget(Transform target = null)
+            => _currentDistantTarget = target == null ? _distantTarget : target;
+        public void ResetDistantTarget()
+            => SetDistantTarget(null);
 
         private float _cameraSmoothDampVelocity;
+        private Transform _currentDistantTarget;
+        public Transform CurrentDistantTarget
+            => _currentDistantTarget;
+
+        private void Awake()
+            => _currentDistantTarget = _distantTarget;
 
         public void ToggleCursor()
         {
@@ -39,8 +47,8 @@ namespace Coalesce
         private void Update()
         {
             var angle = Mathf.Atan2(
-                _distantTarget.position.x - _cameraBoom.position.x,
-                _distantTarget.position.z - _cameraBoom.position.z) * Mathf.Rad2Deg;
+                _currentDistantTarget.position.x - _cameraBoom.position.x,
+                _currentDistantTarget.position.z - _cameraBoom.position.z) * Mathf.Rad2Deg;
 
             var eulers = _cameraBoom.eulerAngles;
             eulers.y = Mathf.SmoothDampAngle(_cameraBoom.eulerAngles.y, angle, ref _cameraSmoothDampVelocity, .5f);
