@@ -33,6 +33,7 @@ namespace Coalesce
                 _object.SetActive(true);
                 enabled = false;
                 _onTrigger.Invoke();
+                GameManager.Instance.StartGame();
             }
         }
     }

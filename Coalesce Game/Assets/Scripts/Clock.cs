@@ -21,7 +21,7 @@ namespace Coalesce
 
         public void StartClock()
         {
-            _startTime = Time.deltaTime;
+            _startTime = Time.time;
             _isRunning = true;
         }
 
