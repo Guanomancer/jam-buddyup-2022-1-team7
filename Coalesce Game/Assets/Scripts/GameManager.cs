@@ -17,6 +17,10 @@ namespace Coalesce
 
         private Dictionary<int, SceneController> _scenes = new Dictionary<int, SceneController>();
 
+        private float _sceneStartTime;
+        public float SceneTime
+            => Time.time - _sceneStartTime;
+
         private void Start()
         {
             foreach (var scene in GetComponents<SceneController>())
@@ -45,6 +49,7 @@ namespace Coalesce
             var scene = _scenes[sceneIndex];
             _currentScene?.Exit();
             _currentScene = scene;
+            _sceneStartTime = Time.time;
             SceneManager.LoadScene(_currentScene.SceneIndex);
             _currentScene?.Enter();
         }

@@ -8,7 +8,7 @@ namespace Coalesce
     {
         public override void OnUpdate()
         {
-            if (Time.time >= GameManager.Instance.GameSettings.MessynessCalculationTimeDelay)
+            if (GameManager.Instance.SceneTime >= GameManager.Instance.GameSettings.MessynessCalculationTimeDelay)
                 Nanny.Transition<NannyChaseState>();
         }
     }
