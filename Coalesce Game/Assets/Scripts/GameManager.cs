@@ -21,6 +21,9 @@ namespace Coalesce
         public float SceneTime
             => Time.time - _sceneStartTime;
 
+        public void StartGame()
+            => FindObjectOfType<Clock>().StartClock();
+
         private void Start()
         {
             foreach (var scene in GetComponents<SceneController>())

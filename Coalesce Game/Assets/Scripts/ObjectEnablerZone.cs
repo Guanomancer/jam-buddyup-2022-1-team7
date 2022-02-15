@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Coalesce
 {
@@ -11,6 +12,9 @@ namespace Coalesce
 
         [SerializeField]
         private GameObject _object;
+
+        [SerializeField]
+        private UnityEvent _onTrigger;
 
         private void OnDrawGizmos()
         {
@@ -28,6 +32,7 @@ namespace Coalesce
 
                 _object.SetActive(true);
                 enabled = false;
+                _onTrigger.Invoke();
             }
         }
     }
