@@ -12,7 +12,37 @@ ModelImporter:
   - first:
       74: 4650215901761733208
     second: Armature|NannyWalk
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Iris.001
+    second: {fileID: 2100000, guid: 1047a6b8308289b4c846862dda5584a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Nanny
+    second: {fileID: 2100000, guid: efaa67e18f578954b8a7930a2812df07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Outereye.001
+    second: {fileID: 2100000, guid: 05dd7d14875edcf40b0082c6f19b52fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Phone
+    second: {fileID: 2100000, guid: 1b047b3b7c63cee4b8b0c578d29080aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pupil.001
+    second: {fileID: 2100000, guid: 95de2752f8246954782853e33f645cb5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White.001
+    second: {fileID: 2100000, guid: 56cfcbcf90316e746855c063cba95352, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
