@@ -417,7 +417,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2127737560}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &23521265
 PrefabInstance:
@@ -3175,6 +3175,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69700955a51d76342877a6ea73f97664, type: 3}
+--- !u!1 &171479887 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3006910546539781680, guid: a9fff780afe230b49a3e07ab97cc805c, type: 3}
+  m_PrefabInstance: {fileID: 1912648388}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &171591492
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20200,7 +20205,7 @@ Transform:
   - {fileID: 509946741}
   - {fileID: 1180413365}
   m_Father: {fileID: 2127737560}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &874114769
 PrefabInstance:
@@ -26838,7 +26843,7 @@ Transform:
   - {fileID: 843434060}
   - {fileID: 1610451208}
   m_Father: {fileID: 2127737560}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1116054950 stripped
 Transform:
@@ -41208,7 +41213,7 @@ Transform:
   - {fileID: 1479284585}
   - {fileID: 1790046230}
   m_Father: {fileID: 2127737560}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &1696841779
 GameObject:
@@ -45500,6 +45505,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5526713137478804081, guid: e3c58dfc7394b7d459656baa00e4a2e3, type: 3}
   m_PrefabInstance: {fileID: 1190361083}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1841204236
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1841204237}
+  - component: {fileID: 1841204238}
+  m_Layer: 0
+  m_Name: GameStartZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1841204237
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841204236}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.46, y: 1.43, z: -12.73}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2127737560}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1841204238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841204236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c943de1e22e7224884d04f0a8cb980e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _size: {x: 1, y: 5, z: 2.93}
+  _object: {fileID: 171479887}
 --- !u!1001 &1843316170
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47117,6 +47168,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nanny
       objectReference: {fileID: 0}
+    - target: {fileID: 3006910546539781680, guid: a9fff780afe230b49a3e07ab97cc805c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3006910546539781683, guid: a9fff780afe230b49a3e07ab97cc805c, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -47597,7 +47652,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2127737560}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1939114456
 BoxCollider:
@@ -48264,7 +48319,7 @@ Transform:
   - {fileID: 1259919389}
   - {fileID: 85940653}
   m_Father: {fileID: 2127737560}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1963393570 stripped
 Transform:
@@ -51584,6 +51639,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1841204237}
   - {fileID: 1690688678}
   - {fileID: 23473568}
   - {fileID: 1115093188}

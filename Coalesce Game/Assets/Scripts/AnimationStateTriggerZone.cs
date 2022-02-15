@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Coalesce
 {
-    public class AnimationStateTrigger : MonoBehaviour
+    public class AnimationStateTriggerZone : MonoBehaviour
     {
         [SerializeField]
         private Vector3 _size = Vector3.one;
