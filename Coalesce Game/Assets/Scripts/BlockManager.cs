@@ -62,7 +62,7 @@ namespace Coalesce
                     i--;
                     _messyBlocks.Add(block);
                     _rightBlocks.Remove(block);
-                    Debug.Log(_messyBlocks.Count + " blocks messy. Blocks remaning: " + _rightBlocks.Count + ". Total blocks: " + _blocks.Count);
+                    //Debug.Log(_messyBlocks.Count + " blocks messy. Blocks remaning: " + _rightBlocks.Count + ". Total blocks: " + _blocks.Count);
                 }
             }
 
