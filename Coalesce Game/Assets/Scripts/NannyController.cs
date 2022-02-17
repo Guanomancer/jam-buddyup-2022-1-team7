@@ -16,6 +16,10 @@ namespace Coalesce
         private Transform _todzillaCarryAnchor;
         [SerializeField]
         private Transform _todzillaCarryCameraFocusAnchor;
+        [SerializeField]
+        private AutoframeCameraController _cameraFramer;
+        [SerializeField]
+        private GameObject _mainRoomCameraZone;
 
         private Transform _todzillaCarryReference;
         private Transform _navigationTarget;
@@ -126,6 +130,17 @@ namespace Coalesce
             }
             else if (!CanReacyTodzilla)
                 _couldReachTodzilla = false;
+        }
+
+        private void OnEnable()
+        {
+            SetNannyAsCameraFocus();
+        }
+
+        private void SetNannyAsCameraFocus()
+        {
+            _mainRoomCameraZone.SetActive(false);
+            _cameraFramer.ResetDistantTarget();
         }
 
         private void RecomputeRoute()
