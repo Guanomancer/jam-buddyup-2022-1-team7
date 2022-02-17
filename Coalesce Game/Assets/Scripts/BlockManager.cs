@@ -13,6 +13,7 @@ namespace Coalesce
         private bool _hasSetBlockOrigins;
         private DestructometerController _destructometer;
         private int _totalBlocks;
+        private float _startTime;
         
         public float Destruction
             => (float)_messyBlocks.Count / _totalBlocks;
@@ -39,11 +40,14 @@ namespace Coalesce
         }
 
         private void Start()
-            => _gameSettings = GameManager.Instance.GameSettings;
+        {
+            _gameSettings = GameManager.Instance.GameSettings;
+            _startTime = Time.time;
+        }
 
         private void Update()
         {
-            if (Time.time < _gameSettings.MessynessCalculationTimeDelay)
+            if (Time.time - _startTime < _gameSettings.MessynessCalculationTimeDelay)
                 return;
 
             if (!_hasSetBlockOrigins)

@@ -7,17 +7,17 @@ namespace Coalesce
     public class NannyEnable : MonoBehaviour
     {
         public GameObject _nanny, _doorCloser;
-        private BlockManager _bM;
         public UIManager _ui;
+        private int _messyBlocksAtStart;
 
         private void Start()
         {
-            _bM = GameObject.Find("Managers").GetComponent<BlockManager>();
             _doorCloser.SetActive(false);
+            _messyBlocksAtStart = BlockManager.Instance._messyBlocks.Count;
         }
         private void Update()
         {
-            if (_bM._messyBlocks.Count != 0 &&
+            if (BlockManager.Instance._messyBlocks.Count != _messyBlocksAtStart &&
                 !_nanny.activeSelf)
             {
                 _nanny.SetActive(true);

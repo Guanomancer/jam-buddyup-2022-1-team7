@@ -43,7 +43,6 @@ namespace Coalesce
         public void Transition(NannyStateBase state)
         {
             _state?.OnExit();
-            //Debug.Log($"Nanny changed state from {_state?.GetType().Name} to {state?.GetType().Name}.");
             _state = state;
             _stateName = _state?.GetType().Name;
             _state?.Enter();

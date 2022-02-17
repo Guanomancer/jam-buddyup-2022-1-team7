@@ -8,21 +8,20 @@ namespace Coalesce
     {
         private int _blocksOnStart;
         private bool _firstChase = true;
-        private BlockManager _bM = GameObject.Find("Managers").GetComponent<BlockManager>();
 
         public override void OnEnter()
         {
-            _blocksOnStart = _bM._messyBlocks.Count;
+            _blocksOnStart = BlockManager.Instance._messyBlocks.Count;
         }
 
         public override void OnUpdate()
         {
-            if (_bM._messyBlocks.Count > 0 && _firstChase)
+            if (BlockManager.Instance._messyBlocks.Count > 0 && _firstChase)
             {
                 Nanny.Transition<NannyChaseState>();
                 _firstChase = false;
             }
-            if (_bM._messyBlocks.Count > _blocksOnStart)
+            if (BlockManager.Instance._messyBlocks.Count > _blocksOnStart)
             {
                 Nanny.Transition<NannyChaseState>();
             }
