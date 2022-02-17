@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Coalesce
 {
@@ -16,6 +17,9 @@ namespace Coalesce
         [SerializeField]
         private TriggerUser _triggerUser;
 
+        [SerializeField]
+        private UnityEvent _additionalEvents;
+
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.yellow;
@@ -30,6 +34,7 @@ namespace Coalesce
                 if (IsTriggerUser(collider))
                     continue;
 
+                _additionalEvents.Invoke();
                 _animator.SetBool(_stateName, !_animator.GetBool(_stateName));
                 enabled = false;
             }
