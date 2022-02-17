@@ -24,6 +24,16 @@ namespace Coalesce
         [SerializeField]
         private string _stateName;
 
+        [SerializeField]
+        private AudioSource _sceneWideAudioSource;
+        public AudioSource SceneWideAudioSource
+            => _sceneWideAudioSource;
+
+        [SerializeField]
+        private AudioClip _wompWompClip;
+        public AudioClip WompWompClip
+            => _wompWompClip;
+
         private NannyStateBase _state;
         private NannyStateBase[] _states;
 

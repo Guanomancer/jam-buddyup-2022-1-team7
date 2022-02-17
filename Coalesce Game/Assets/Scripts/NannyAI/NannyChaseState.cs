@@ -34,6 +34,7 @@ namespace Coalesce
                     Nanny.Transition<NannyPickupMessState>();
                     break;
                 case EventName.TodzillaCaught:
+                    Nanny.SceneWideAudioSource.PlayOneShot(Nanny.WompWompClip, 1f);
                     Nanny.Transition<NannyPickupTodzillaState>();
                     break;
             }

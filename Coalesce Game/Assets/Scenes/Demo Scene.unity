@@ -14032,7 +14032,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 524214ee8cfb9db4cb105e4b42eafd6a, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -49800,6 +49800,14 @@ PrefabInstance:
       propertyPath: _chaseTarget
       value: 
       objectReference: {fileID: 1384484678}
+    - target: {fileID: 2146570053558022475, guid: a9fff780afe230b49a3e07ab97cc805c, type: 3}
+      propertyPath: _wompWompClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 252e97bbd56cbea44a71dd7530b45523, type: 3}
+    - target: {fileID: 2146570053558022475, guid: a9fff780afe230b49a3e07ab97cc805c, type: 3}
+      propertyPath: _sceneWideAudioSource
+      value: 
+      objectReference: {fileID: 575901663}
     - target: {fileID: 3006910546539781680, guid: a9fff780afe230b49a3e07ab97cc805c, type: 3}
       propertyPath: m_Name
       value: Nanny
