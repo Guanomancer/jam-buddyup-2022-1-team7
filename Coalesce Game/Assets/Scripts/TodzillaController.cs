@@ -66,10 +66,10 @@ namespace Coalesce
             switch(eventName)
             {
                 case EventName.TodzillaRightFoot:
-                    _audio.PlayOneShot(_rightFootstep);
+                    _audio.PlayOneShot(_rightFootstep, 0.3f);
                     break;
                 case EventName.TodzillaLeftFoot:
-                    _audio.PlayOneShot(_leftFootstep);
+                    _audio.PlayOneShot(_leftFootstep, 0.3f);
                     break;
             }
         }

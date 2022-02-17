@@ -5494,6 +5494,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 0f106f7e-6480-44c7-8c16-46b896c8a355
     m_ActionName: Todzilla/DebugBreak[/Keyboard/b]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5b70d636-9e4c-44db-8717-a1b13665dbfa
+    m_ActionName: Cut Scene/Skip[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Todzilla
@@ -5574,7 +5578,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5704,6 +5708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _camera: {fileID: 6910455871197563590}
+  _minDistanceFromZilla: 1.5
 --- !u!1 &6910455871197563588
 GameObject:
   m_ObjectHideFlags: 0
