@@ -8,6 +8,7 @@ namespace Coalesce
     {
         public GameObject _nanny, _doorCloser;
         private BlockManager _bM;
+        public UIManager _ui;
 
         private void Start()
         {
@@ -20,6 +21,7 @@ namespace Coalesce
             {
                 _nanny.SetActive(true);
                 _doorCloser.SetActive(true);
+                _ui.ActivateUI();
             }
         }
     }
