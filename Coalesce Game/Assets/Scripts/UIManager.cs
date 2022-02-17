@@ -15,6 +15,7 @@ namespace Coalesce
         public void ActivateUI()
         {
             _clock.SetActive(true);
+            _clock.GetComponent<Clock>().StartClock();
             _meter.SetActive(true);
         }
     }

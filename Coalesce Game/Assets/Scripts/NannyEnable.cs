@@ -17,7 +17,8 @@ namespace Coalesce
         }
         private void Update()
         {
-            if (_bM._messyBlocks.Count != 0)
+            if (_bM._messyBlocks.Count != 0 &&
+                !_nanny.activeSelf)
             {
                 _nanny.SetActive(true);
                 _doorCloser.SetActive(true);

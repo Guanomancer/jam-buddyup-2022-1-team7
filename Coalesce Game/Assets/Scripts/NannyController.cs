@@ -20,6 +20,8 @@ namespace Coalesce
         private AutoframeCameraController _cameraFramer;
         [SerializeField]
         private GameObject _mainRoomCameraZone;
+        [SerializeField]
+        private AudioSource _soundScape;
 
         private Transform _todzillaCarryReference;
         private Transform _navigationTarget;
@@ -135,6 +137,12 @@ namespace Coalesce
         private void OnEnable()
         {
             SetNannyAsCameraFocus();
+            EnableSoundscape();
+        }
+
+        private void EnableSoundscape()
+        {
+            _soundScape.Play();
         }
 
         private void SetNannyAsCameraFocus()

@@ -14031,7 +14031,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 524214ee8cfb9db4cb105e4b42eafd6a, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
@@ -41485,6 +41485,10 @@ PrefabInstance:
       propertyPath: _seconds
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 701175734, guid: c122a042deb72bb4aae343abd093a584, type: 3}
+      propertyPath: _fullTime
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 168139523019692657, guid: c122a042deb72bb4aae343abd093a584, type: 3}
       propertyPath: m_Name
       value: UI Canvas
@@ -49852,6 +49856,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3006910546539781692, guid: a9fff780afe230b49a3e07ab97cc805c, type: 3}
+      propertyPath: _soundScape
+      value: 
+      objectReference: {fileID: 575901663}
     - target: {fileID: 3006910546539781692, guid: a9fff780afe230b49a3e07ab97cc805c, type: 3}
       propertyPath: _cameraFramer
       value: 
