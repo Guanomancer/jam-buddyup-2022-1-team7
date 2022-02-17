@@ -6,9 +6,9 @@ namespace Coalesce
 {
     public class BlockManager : ManagerBase<BlockManager>, IEventDispatcher
     {
-        private List<BlockController> _blocks = new List<BlockController>();
-        private List<BlockController> _messyBlocks = new List<BlockController>();
-        private List<BlockController> _rightBlocks = new List<BlockController>();
+        public List<BlockController> _blocks = new List<BlockController>();
+        public List<BlockController> _messyBlocks = new List<BlockController>();
+        public List<BlockController> _rightBlocks = new List<BlockController>();
         private GameSettings _gameSettings;
         private bool _hasSetBlockOrigins;
         private DestructometerController _destructometer;

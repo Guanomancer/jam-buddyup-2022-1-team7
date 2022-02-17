@@ -6,10 +6,14 @@ namespace Coalesce
 {
     public class NannyGoHaveARestState : NannyStateBase
     {
+        private BlockManager _bM = GameObject.Find("Managers").GetComponent<BlockManager>();
+        private int _blocksOnStart;
+
         public override void OnEnter()
         {
             Nanny.GetComponent<NannyController>().SetNavigationTarget(Nanny.RestTarget);
             Nanny.Animator.SetBool("IsWalking", true);
+            _blocksOnStart = _bM._messyBlocks.Count;
         }
 
         public override void OnExit()
@@ -23,7 +27,12 @@ namespace Coalesce
                 return;
 
             if (Nanny.GetComponent<NannyController>().DistanceToTarget < 1.5f)
+                Nanny.Transition<NannyIdleState>();
+
+            else if (_bM._messyBlocks.Count > _blocksOnStart)
+            {
                 Nanny.Transition<NannyChaseState>();
+            }
         }
     }
 }

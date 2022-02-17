@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Coalesce
@@ -26,7 +24,7 @@ namespace Coalesce
             var colliders = Physics.OverlapBox(transform.position, _size / 2f, transform.rotation);
             foreach(var collider in colliders)
             {
-                if(collider.GetComponentInParent<TodzillaController>() == null)
+                if(collider.GetComponentInParent<TodzillaController>() != null)
                     continue;
 
                 _animator.SetBool(_stateName, !_animator.GetBool(_stateName));
