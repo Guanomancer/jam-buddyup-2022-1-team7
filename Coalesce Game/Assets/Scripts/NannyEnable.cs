@@ -13,6 +13,7 @@ namespace Coalesce
         private void Start()
         {
             _doorCloser.SetActive(false);
+            _nanny.SetActive(false);
             _messyBlocksAtStart = BlockManager.Instance._messyBlocks.Count;
         }
         private void Update()

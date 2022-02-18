@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace Coalesce
 {
@@ -40,6 +39,11 @@ namespace Coalesce
 
             _hand.transform.Rotate(new Vector3(0, 0, (Time.deltaTime * -360) / _seconds));
             _fillImage.fillAmount = 1f - ((Time.time - _startTime) / _fullTime);
+
+            if(_fillImage.fillAmount <= 0)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
         }
     }
 }
