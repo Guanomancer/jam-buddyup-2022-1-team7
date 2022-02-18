@@ -9,6 +9,7 @@ namespace Coalesce
     {
         [SerializeField]
         private bool _countTowardsScore = true;
+        public bool CountTowardsScore => _countTowardsScore;
 
         private Vector3 _originalPosition;
         private Quaternion _originalRotation;
