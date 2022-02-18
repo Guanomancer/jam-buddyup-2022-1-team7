@@ -9,6 +9,9 @@ namespace Coalesce
         private int _blocksOnStart;
         private bool _firstChase = true;
 
+        [SerializeField]
+        private float _nannyWaitTime = 5;
+
         public override void OnEnter()
         {
             _blocksOnStart = BlockManager.Instance._messyBlocks.Count;
@@ -18,9 +21,11 @@ namespace Coalesce
         {
             if (BlockManager.Instance._messyBlocks.Count > 0 && _firstChase)
             {
-                Nanny.Transition<NannyChaseState>();
+                var controller = Nanny.GetComponent<NannyController>();
+                controller.StartCoroutine(controller.NannyFirstChase(_nannyWaitTime));
                 _firstChase = false;
             }
+
             if (BlockManager.Instance._messyBlocks.Count > _blocksOnStart)
             {
                 Nanny.Transition<NannyChaseState>();

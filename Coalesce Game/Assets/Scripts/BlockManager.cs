@@ -14,10 +14,10 @@ namespace Coalesce
         private DestructometerController _destructometer;
         private int _totalBlocks;
         private float _startTime;
-        
+        private float _blocksAtStart;
+        private float _totalMessyBlocks = 0;
         public float Destruction
-            => (float)_messyBlocks.Count / _totalBlocks;
-
+            => (float)_totalMessyBlocks / _blocksAtStart;
         public void RegisterBlock(BlockController block, bool isMessy = false)
         {
             _totalBlocks++;
@@ -43,6 +43,7 @@ namespace Coalesce
         {
             _gameSettings = GameManager.Instance.GameSettings;
             _startTime = Time.time;
+            _blocksAtStart = _blocks.Count;
         }
 
         private void Update()
@@ -66,6 +67,7 @@ namespace Coalesce
                     i--;
                     _messyBlocks.Add(block);
                     _rightBlocks.Remove(block);
+                    _totalMessyBlocks++;
                     //Debug.Log(_messyBlocks.Count + " blocks messy. Blocks remaning: " + _rightBlocks.Count + ". Total blocks: " + _blocks.Count);
                 }
             }
