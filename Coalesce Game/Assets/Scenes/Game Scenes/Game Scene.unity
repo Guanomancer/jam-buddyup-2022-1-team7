@@ -46503,7 +46503,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 701175734, guid: c122a042deb72bb4aae343abd093a584, type: 3}
       propertyPath: _fullTime
-      value: 20
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 168139522149329328, guid: c122a042deb72bb4aae343abd093a584, type: 3}
       propertyPath: m_IsActive
