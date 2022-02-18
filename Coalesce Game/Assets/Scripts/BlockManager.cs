@@ -72,17 +72,16 @@ namespace Coalesce
                     _messyBlocks.Add(block);
                     _rightBlocks.Remove(block);
                     _totalMessyBlocks++;
-                    //Debug.Log(_messyBlocks.Count + " blocks messy. Blocks remaning: " + _rightBlocks.Count + ". Total blocks: " + _blocks.Count);
+                    Debug.Log("Destruction: " + (1f - Destruction) + ": " + _messyBlocks.Count + " blocks messy. Blocks remaning: " + _rightBlocks.Count + ". Total blocks: " + _blocks.Count);
                 }
             }
 
             if (_destructometer == null)
                 _destructometer = FindObjectOfType<DestructometerController>();
             else
-            {
                 _destructometer.Destruction = 1f - Destruction;
-                Debug.Log(1f - Destruction + ", " + _totalMessyBlocks + ", " + _blocksAtStart);
-            }
+
+            //Debug.Log(1f - Destruction + ", " + _totalMessyBlocks + ", " + _blocksAtStart);
         }
     }
 }
