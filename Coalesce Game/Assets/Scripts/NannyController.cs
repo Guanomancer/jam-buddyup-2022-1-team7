@@ -114,13 +114,8 @@ namespace Coalesce
             _todzillaCarryReference.GetComponent<AutoframeCameraController>().SetDistantTarget(transform);
             andThen();
         }
-        public IEnumerator NannyFirstChase(float _nannyWaitTime)
-        {
-            yield return new WaitForSeconds(_nannyWaitTime);
-            Nanny.Transition<NannyChaseState>();
-        }
 
-            private void Awake()
+        private void Awake()
         {
             _agent = GetComponent<NavMeshAgent>();
             _char = GetComponent<CharacterController>();

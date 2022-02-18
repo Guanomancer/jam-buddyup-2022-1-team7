@@ -21,8 +21,7 @@ namespace Coalesce
         {
             if (BlockManager.Instance._messyBlocks.Count > 0 && _firstChase)
             {
-                var controller = Nanny.GetComponent<NannyController>();
-                controller.StartCoroutine(controller.NannyFirstChase(_nannyWaitTime));
+                Nanny.Transition<NannyChaseState>();
                 _firstChase = false;
             }
 

@@ -15,9 +15,11 @@ namespace Coalesce
         private int _totalBlocks;
         private float _startTime;
         private float _blocksAtStart;
-        private float _totalMessyBlocks = 0;
+        private float _totalMessyBlocks;
+
         public float Destruction
             => (float)_totalMessyBlocks / _blocksAtStart;
+
         public void RegisterBlock(BlockController block, bool isMessy = false)
         {
             _totalBlocks++;
