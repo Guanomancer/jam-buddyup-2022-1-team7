@@ -42,6 +42,12 @@ namespace Coalesce
             }
         }
 
+        public void SkipIntro()
+        {
+            if (_currentScene.SceneIndex == 0)
+                TransitionScene(1);
+        }
+
         public void TransitionScene(int sceneIndex)
         {
             if(!_scenes.ContainsKey(sceneIndex))
@@ -49,6 +55,7 @@ namespace Coalesce
                 Debug.LogError($"Scene {sceneIndex} does not exist in the game manager.", this);
                 return;
             }
+
             var scene = _scenes[sceneIndex];
             _currentScene?.Exit();
             _currentScene = scene;
