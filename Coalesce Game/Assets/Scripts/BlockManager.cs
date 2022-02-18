@@ -22,6 +22,8 @@ namespace Coalesce
 
         public void RegisterBlock(BlockController block, bool isMessy = false)
         {
+            if (_blocks.Contains(block))
+                return;
             _totalBlocks++;
             _blocks.Add(block);
             _rightBlocks.Add(block);
@@ -77,7 +79,10 @@ namespace Coalesce
             if (_destructometer == null)
                 _destructometer = FindObjectOfType<DestructometerController>();
             else
+            {
                 _destructometer.Destruction = 1f - Destruction;
+                Debug.Log(1f - Destruction + ", " + _totalMessyBlocks + ", " + _blocksAtStart);
+            }
         }
     }
 }
