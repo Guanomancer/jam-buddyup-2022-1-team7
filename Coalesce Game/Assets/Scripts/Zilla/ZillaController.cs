@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 using Coalesce.EventRouting;
 using Coalesce;
 
-public class ZillaController : MonoBehaviour, Zilla
+public class ZillaController : MonoBehaviour, Zilla, IEventSubscriber
 {
     [SerializeField, Tooltip("Max speed in m/s")]
     private float _crawlSpeed = 1f;
@@ -38,6 +38,9 @@ public class ZillaController : MonoBehaviour, Zilla
         if (_animator == null)
             Debug.LogWarning("No animator found in GameObject or any of the children.", this);
         _audio = GetComponent<AudioSource>();
+
+        EventRouter.Subscribe<EventTypes.NannyPickedUpZilla>(this);
+        EventRouter.Subscribe<EventTypes.NannyPutDownZilla>(this);
     }
 
     private void OnDisable()
@@ -80,4 +83,20 @@ public class ZillaController : MonoBehaviour, Zilla
 
     private void ApplyVelocity()
         => _body.MovePosition(transform.localPosition + _velocity * Time.deltaTime);
+
+    public void OnEvent<T>(T eventData)
+        where T : IEventData
+    {
+        switch(eventData)
+        {
+            case EventTypes.NannyPickedUpZilla zilla:
+                _body.isKinematic = true;
+                enabled = false;
+                break;
+            case EventTypes.NannyPutDownZilla zilla:
+                _body.isKinematic = false;
+                enabled = true;
+                break;
+        }
+    }
 }

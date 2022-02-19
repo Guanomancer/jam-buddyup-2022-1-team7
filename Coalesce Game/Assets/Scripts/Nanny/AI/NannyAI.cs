@@ -62,8 +62,9 @@ namespace Coalesce.Nanny
                 new NannyIdleState(),
                 new NannyChaseState(),
                 new NannyPickupMessState(),
-                new NannyPickupTodzillaState(),
-                new NannyCarryTodzillaState(),
+                new NannyPickupZillaState(),
+                new NannyCarryZillaState(),
+                new NannyPutDownZillaState(),
                 new NannyGoHaveARestState(),
             };
             foreach (var state in _states)

@@ -17,8 +17,9 @@ namespace Coalesce.Nanny
         private Transform _zillaCarryAnchor;
         [SerializeField]
         private Transform _zillaCarryCameraFocusAnchor;
-
+        [SerializeField]
         private Transform _zillaCarryReference;
+
         private Transform _navigationTarget;
 
         private NavMeshAgent _agent;
@@ -35,6 +36,7 @@ namespace Coalesce.Nanny
             if (_navigationTarget != null)
             {
                 _agent.SetDestination(_navigationTarget.position);
+                _agent.isStopped = false;
                 _animator.SetBool("IsWalking", true);
                 EventRouter.Dispatch(new EventTypes.NannyStartedMoving { });
             }
@@ -51,6 +53,44 @@ namespace Coalesce.Nanny
 
         public float DistanceToTarget
             => _agent.remainingDistance;
+
+        public bool CompareTarget(Transform target)
+            => _navigationTarget == target;
+
+        public void Pickup()
+        {
+            _animator.SetBool("Pickup", true);
+        }
+
+        public void EndPickup()
+        {
+            _animator.SetBool("Pickup", false);
+            //EventRouter.Dispatch(new EventTypes.NannyPickedUpZilla { });
+        }
+
+        public void Putdown()
+        {
+            _animator.SetBool("Putdown", true);
+        }
+
+        public void EndPutdown()
+        {
+            _animator.SetBool("Putdown", false);
+            //EventRouter.Dispatch(new EventTypes.NannyPutDownZilla { });
+        }
+
+        public void StartCarry()
+        {
+            _zillaCarryReference.parent = _zillaCarryAnchor;
+            _zillaCarryReference.localPosition = Vector3.zero;
+            _zillaCarryReference.localRotation = Quaternion.identity;
+        }
+
+        public void EndCarry(Transform dropTarget)
+        {
+            _zillaCarryReference.parent = null;
+            _zillaCarryReference.position = dropTarget.position + Vector3.up * 0.2f;
+        }
 
         private void Awake()
         {

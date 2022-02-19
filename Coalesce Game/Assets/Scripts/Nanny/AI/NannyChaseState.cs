@@ -30,7 +30,7 @@ namespace Coalesce.Nanny
                     Nanny.Transition<NannyPickupMessState>();
                     break;
                 case EventTypes.NannyCanReachZilla zilla:
-                    Nanny.Transition<NannyPickupTodzillaState>();
+                    Nanny.Transition<NannyPickupZillaState>();
                     break;
             }
         }
