@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Coalesce.DeadCode
 {
-    [CreateAssetMenu(fileName = "New Audio Event Collection", menuName = "Todzilla/Audio Event Collection")]
+    [CreateAssetMenu(fileName = "New Audio Event Collection", menuName = "Todzilla/DeadCode Audio Event Collection")]
     public class AudioEventCollection : ScriptableObject
     {
         [SerializeField]

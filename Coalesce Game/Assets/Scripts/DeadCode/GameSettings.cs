@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Coalesce.DeadCode
 {
-    [CreateAssetMenu(fileName = "New Game Settings", menuName = "Todzilla/Game Settings")]
+    [CreateAssetMenu(fileName = "New Game Settings", menuName = "Todzilla/DeadCode Game Settings")]
     public class GameSettings : ScriptableObject
     {
         [Header("Physics")]
