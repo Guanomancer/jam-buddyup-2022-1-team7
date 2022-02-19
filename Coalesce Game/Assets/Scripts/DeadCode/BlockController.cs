@@ -45,7 +45,7 @@ namespace Coalesce.DeadCode
                 return true;
 
             _isMessy = ComputeMagnitudeFromOrigin() >= _gameSettings.MessynessMagnitydeThreshold ||
-                        ComputeSpinFromOrigin() >= _gameSettings.MessynessMagnitydeThreshold;
+                        ComputeSpinFromOrigin() >= _gameSettings.MessynessSpinThreshold;
 
             GetComponentInChildren<NavMeshObstacle>().enabled = !_isMessy;
 
