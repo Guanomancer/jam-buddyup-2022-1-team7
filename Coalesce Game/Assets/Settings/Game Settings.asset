@@ -9,37 +9,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a6a7d8fc2f794e41889a0c742f5fac4, type: 3}
+  m_Script: {fileID: 11500000, guid: 794f1f68bc949944397169c6f51e07df, type: 3}
   m_Name: Game Settings
   m_EditorClassIdentifier: 
-  _messynessMagnitudeThreshold: 5
-  _messynessSpinThreshold: 60
+  _messynessMagnitudeThreshold: 0.5
+  _messynessSpinThreshold: 30
   _messynessCalculationTimeDelay: 10
-  _blockCollisionSounds: {fileID: 11400000, guid: 61bfb6c1928bb6a48943f38af527ce6b, type: 2}
+  _blockCollisionSounds: {fileID: 0}
   _blockCollisionSoundTriggerImpulseThreshold: 3
-  _blockCollisionSoundTriggerVelocityThreshold: 1.5
-  _blockCollisionSoundTriggerAngularVelocityThreshold: 100
+  _blockCollisionSoundTriggerVelocityThreshold: 0.5
+  _blockCollisionSoundTriggerAngularVelocityThreshold: 0.5
   _blockCollisionSoundCurve:
     serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: -0.0060637225
-      value: 0.20528199
-      inSlope: 0.13039346
-      outSlope: 0.13039346
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.0775076
-    - serializedVersion: 3
-      time: 3.9899292
-      value: 0.9806824
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
+    m_Curve: []
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4

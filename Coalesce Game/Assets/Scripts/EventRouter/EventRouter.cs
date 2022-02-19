@@ -8,6 +8,27 @@ namespace Coalesce
     {
         private static Dictionary<Type, List<IEventSubscriber>> _subscribers = new Dictionary<Type, List<IEventSubscriber>>();
 
+        private static HashSet<string> _eventTypesToDisplay = new HashSet<string>();
+        private static bool _displayAllEvents;
+
+        public static void DisplayAllEvents()
+            => _displayAllEvents = true;
+
+        public static void DontDisplayAllEvents()
+            => _displayAllEvents = false;
+
+        public static void DisplayEventType(string typeName)
+        {
+            if (!_eventTypesToDisplay.Contains(typeName))
+                _eventTypesToDisplay.Add(typeName);
+        }
+
+        public static void DontDisplayEventType(string typeName)
+        {
+            if (!_eventTypesToDisplay.Contains(typeName))
+                _eventTypesToDisplay.Add(typeName);
+        }
+
         public static void Subscribe<T>(IEventSubscriber subscriber)
             where T : EventData
         {
@@ -31,6 +52,11 @@ namespace Coalesce
         {
             if (!_subscribers.ContainsKey(typeof(T)))
                 return;
+
+#if UNITY_EDITOR
+            if (_displayAllEvents || _eventTypesToDisplay.Contains(typeof(T).Name))
+                Debug.Log($"{typeof(T).Name} occured.\n{eventData}");
+#endif
 
             foreach (var subscriber in _subscribers[typeof(T)])
                 subscriber.OnEvent<T>(eventData);

@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 069f871cb0c258a4f9cea50b7e0773a2, type: 3}
-  m_Name: Block Collision Sounds
+  m_Script: {fileID: 11500000, guid: 6c6256786509f1d4786b8af0820a3a8e, type: 3}
+  m_Name: DeadCode Block Collision Sounds
   m_EditorClassIdentifier: 
   _audioClips:
   - {fileID: 8300000, guid: 4dc44e50588d7cb48a8557a3ef86b793, type: 3}

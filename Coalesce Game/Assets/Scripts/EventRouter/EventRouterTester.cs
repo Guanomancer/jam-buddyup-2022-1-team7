@@ -8,14 +8,14 @@ namespace Coalesce
     {
         private void Start()
         {
-            EventRouter.Subscribe<StartEventData>(this);
-            EventRouter.Subscribe<EndEventData>(this);
-            EventRouter.Dispatch(new StartEventData { ID = 10 });
+            EventRouter.Subscribe<StartEvent>(this);
+            EventRouter.Subscribe<EndEvent>(this);
+            EventRouter.Dispatch(new StartEvent { ID = 10 });
         }
 
         private void Update()
         {
-            EventRouter.Dispatch(new EndEventData { ID = 15 });
+            EventRouter.Dispatch(new EndEvent { ID = 15 });
             enabled = false;
         }
 
@@ -24,22 +24,22 @@ namespace Coalesce
         {
             switch(eventData)
             {
-                case StartEventData startEventData:
+                case StartEvent startEventData:
                     Debug.Log("Start: " + startEventData.ID);
                     break;
-                case EndEventData endEventData:
+                case EndEvent endEventData:
                     Debug.Log("End: " + endEventData.ID);
                     break;
             }
         }
     }
 
-    public struct StartEventData : EventData
+    public struct StartEvent : EventData
     {
         public int ID;
     }
 
-    public struct EndEventData : EventData
+    public struct EndEvent : EventData
     {
         public int ID;
     }
