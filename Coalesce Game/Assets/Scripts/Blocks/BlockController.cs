@@ -46,9 +46,9 @@ namespace Coalesce
                 BatchUpdater.UnregisterForUpdating<BlockController>(this);
                 _messyBlocks.Add(this);
                 _rightBlocks.Remove(this);
-                EventRouter.Dispatch(new ScoringBlockMessy { });
+                EventRouter.Dispatch(new EventTypes.ScoringBlockMessy { });
                 if (_rightBlocks.Count == 0)
-                    EventRouter.Dispatch(new AllScoringBlocksMessy { });
+                    EventRouter.Dispatch(new EventTypes.AllScoringBlocksMessy { });
             }
         }
 

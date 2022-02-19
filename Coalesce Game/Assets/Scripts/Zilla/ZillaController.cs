@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 using Coalesce.EventRouting;
 using Coalesce;
 
-public class ZillaController : MonoBehaviour
+public class ZillaController : MonoBehaviour, Zilla
 {
     [SerializeField, Tooltip("Max speed in m/s")]
     private float _crawlSpeed = 1f;

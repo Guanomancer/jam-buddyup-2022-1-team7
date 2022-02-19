@@ -13,6 +13,10 @@ namespace Coalesce.EventRouting
         private static bool _displayAllEvents;
         public static Color ConsoleColor = new Color(0, 0, .8f);
 
+        private static bool _isDispatching;
+        private static List<(Type, IEventSubscriber)> _addWaitingList = new List<(Type, IEventSubscriber)>();
+        private static List<(Type, IEventSubscriber)> _removeWaitingList = new List<(Type, IEventSubscriber)>();
+
         public static void DisplayAllEvents()
             => _displayAllEvents = true;
 
@@ -32,25 +36,31 @@ namespace Coalesce.EventRouting
         }
 
         public static void Subscribe<T>(IEventSubscriber subscriber)
-            where T : EventData
+            where T : IEventData
         {
             if (!_subscribers.ContainsKey(typeof(T)))
                 _subscribers.Add(typeof(T), new List<IEventSubscriber>());
 
-            _subscribers[typeof(T)].Add(subscriber);
+            if (_isDispatching)
+                _addWaitingList.Add((typeof(T), subscriber));
+            else
+                _subscribers[typeof(T)].Add(subscriber);
         }
 
         public static void Unsubscribe<T>(IEventSubscriber subscriber)
-            where T : EventData
+            where T : IEventData
         {
             if (!_subscribers.ContainsKey(typeof(T)))
                 return;
 
-            _subscribers[typeof(T)].Remove(subscriber);
+            if (_isDispatching)
+                _removeWaitingList.Add((typeof(T), subscriber));
+            else
+                _subscribers[typeof(T)].Remove(subscriber);
         }
 
         public static void Dispatch<T>(T eventData)
-            where T : EventData
+            where T : IEventData
         {
 #if UNITY_EDITOR
             if ((_displayAllEvents && !_eventTypesToNotDisplay.Contains(typeof(T).Name)) ||
@@ -66,18 +76,28 @@ namespace Coalesce.EventRouting
             if (!_subscribers.ContainsKey(typeof(T)))
                 return;
 
+            _isDispatching = true;
             foreach (var subscriber in _subscribers[typeof(T)])
                 subscriber.OnEvent<T>(eventData);
+            _isDispatching = false;
+
+            foreach (var subscriber in _addWaitingList)
+                _subscribers[subscriber.Item1].Add(subscriber.Item2);
+            _addWaitingList.Clear();
+
+            foreach (var subscriber in _removeWaitingList)
+                _subscribers[subscriber.Item1].Remove(subscriber.Item2);
+            _removeWaitingList.Clear();
         }
     }
 
     public interface IEventSubscriber
     {
         void OnEvent<T>(T eventData)
-            where T : EventData;
+            where T : IEventData;
     }
 
     public interface IEventDispatcher { }
 
-    public interface EventData { }
+    public interface IEventData { }
 }

@@ -20,7 +20,7 @@ namespace Coalesce.EventRouting
         }
 
         public void OnEvent<T>(T eventData)
-            where T : EventData
+            where T : IEventData
         {
             switch(eventData)
             {
@@ -34,12 +34,12 @@ namespace Coalesce.EventRouting
         }
     }
 
-    public struct StartEvent : EventData
+    public struct StartEvent : IEventData
     {
         public int ID;
     }
 
-    public struct EndEvent : EventData
+    public struct EndEvent : IEventData
     {
         public int ID;
     }

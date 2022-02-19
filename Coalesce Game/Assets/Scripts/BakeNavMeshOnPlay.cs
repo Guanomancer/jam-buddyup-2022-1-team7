@@ -13,10 +13,7 @@ namespace Coalesce
         private void Awake()
         {
             foreach (var surface in _surfaces)
-            {
-                if (surface.tag != "Door")
-                    surface.BuildNavMesh();
-            }
+                surface.BuildNavMesh();
         }
     }
 }
