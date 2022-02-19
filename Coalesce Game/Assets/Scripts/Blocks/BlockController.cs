@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Coalesce.EventRouting;
 
 namespace Coalesce
 {
@@ -46,6 +47,8 @@ namespace Coalesce
                 _messyBlocks.Add(this);
                 _rightBlocks.Remove(this);
                 EventRouter.Dispatch(new ScoringBlockMessy { });
+                if (_rightBlocks.Count == 0)
+                    EventRouter.Dispatch(new AllScoringBlocksMessy { });
             }
         }
 

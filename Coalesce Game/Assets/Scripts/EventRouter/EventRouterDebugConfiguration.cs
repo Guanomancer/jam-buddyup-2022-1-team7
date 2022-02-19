@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Coalesce
+namespace Coalesce.EventRouting
 {
     public class EventRouterDebugConfiguration : MonoBehaviour
     {

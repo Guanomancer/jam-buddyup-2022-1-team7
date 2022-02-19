@@ -36,9 +36,7 @@ namespace Coalesce
             if (_lastCollisionTime + 0.3f > Time.time)
                 return;
 
-            Debug.Log(System.Math.Round(magnitude, 2));
-
-            //Debug.Log(collision.transform.name + " Mag: " + magnitude + " Vel: " + velocity + " Ang: " + angularVelocity);
+            //Debug.Log(System.Math.Round(magnitude, 2));
             var volumeScalar = Mathf.Clamp(
                 Settings.Game.BlockCollisionSoundCurve.Evaluate(
                     magnitude - Settings.Game.BlockCollisionSoundTriggerVelocityThreshold),

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Coalesce
+namespace Coalesce.EventRouting
 {
     public static class EventRouter
     {
@@ -50,13 +50,13 @@ namespace Coalesce
         public static void Dispatch<T>(T eventData)
             where T : EventData
         {
-            if (!_subscribers.ContainsKey(typeof(T)))
-                return;
-
 #if UNITY_EDITOR
             if (_displayAllEvents || _eventTypesToDisplay.Contains(typeof(T).Name))
                 Debug.Log($"{typeof(T).Name} occured.\n{eventData}");
 #endif
+
+            if (!_subscribers.ContainsKey(typeof(T)))
+                return;
 
             foreach (var subscriber in _subscribers[typeof(T)])
                 subscriber.OnEvent<T>(eventData);
