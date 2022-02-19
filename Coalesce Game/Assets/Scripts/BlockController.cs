@@ -27,6 +27,7 @@ namespace Coalesce
         {
             if(_countTowardsScore)
             {
+                BatchUpdater.RequestBatchUpdatingForScene();
                 _totalScoringBlocks++;
                 _allBlocks.Add(this);
                 _rightBlocks.Add(this);

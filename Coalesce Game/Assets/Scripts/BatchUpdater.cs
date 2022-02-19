@@ -31,31 +31,48 @@ namespace Coalesce
                 _behaviours[typeof(T)].Remove(updatable);
         }
 
-        private float _awakeTime;
+        public static void RequestBatchUpdatingForScene()
+        {
+            if (_instance != null)
+                return;
+
+            var obj = new GameObject("BatchUpdater");
+            obj.AddComponent<BatchUpdater>();
+        }
+
         private bool _notifyBatchStarting = true;
 
         private void Update()
         {
-            if (Time.time - _awakeTime < Settings.Game.BatchUpdaterTimeDelay)
+            if (Time.timeSinceLevelLoad < Settings.Game.BatchUpdaterTimeDelay)
                 return;
-            if (_notifyBatchStarting)
-            {
-                _notifyBatchStarting = false;
-                using (var ptr = _behaviours.GetEnumerator())
-                    while (ptr.MoveNext())
-                        for (int i = 0; i < ptr.Current.Value.Count; i++)
-                            ptr.Current.Value[i].BatchStarting();
-            }
 
+            if (_notifyBatchStarting)
+                NotifyBatchStarting();
+
+            BatchUpdate();
+        }
+
+        private static void BatchUpdate()
+        {
             _isUpdating = true;
             using (var ptr = _behaviours.GetEnumerator())
                 while (ptr.MoveNext())
-                    for(int i = 0; i < ptr.Current.Value.Count; i++)
+                    for (int i = 0; i < ptr.Current.Value.Count; i++)
                         ptr.Current.Value[i].BatchUpdate();
             _isUpdating = false;
             foreach (var updateable in _removeAfterUpdate)
                 _behaviours[updateable.GetType()].Remove(updateable);
             _removeAfterUpdate.Clear();
+        }
+
+        private void NotifyBatchStarting()
+        {
+            _notifyBatchStarting = false;
+            using (var ptr = _behaviours.GetEnumerator())
+                while (ptr.MoveNext())
+                    for (int i = 0; i < ptr.Current.Value.Count; i++)
+                        ptr.Current.Value[i].BatchStarting();
         }
 
         #region Singleton Contract
@@ -71,8 +88,6 @@ namespace Coalesce
 
             _instance = this;
             DontDestroyOnLoad(gameObject);
-
-            _awakeTime = Time.time;
         }
         #endregion
     }
