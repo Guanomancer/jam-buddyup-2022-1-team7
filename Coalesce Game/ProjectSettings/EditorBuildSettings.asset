@@ -6,18 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Game Scenes/Intro Scene.unity
-    guid: 418b145ae310a6f4bb9b36e2f8db3c17
-  - enabled: 1
-    path: Assets/Scenes/Game Scenes/Menu Main.unity
-    guid: ae9d46d090e31e244bbe267b773158b7
-  - enabled: 1
-    path: Assets/Scenes/Game Scenes/Game Scene.unity
-    guid: 3a02d3256fa55cf4fafa88a20892455b
-  - enabled: 1
-    path: Assets/Scenes/Game Scenes/Ending Scene.unity
-    guid: d7cb33478f4c9e740a76f9b24de526d0
-  - enabled: 1
-    path: Assets/Scenes/Game Scenes/Credits and score.unity
-    guid: 85f705d5b8005484d83b8529f5212c99
+    path: Assets/Scenes/Construction Scenes/Zilla Construction.unity
+    guid: ed4857f91c3390f4ca1e726fd44d7220
   m_configObjects: {}
