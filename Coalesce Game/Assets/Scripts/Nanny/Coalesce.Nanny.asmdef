@@ -1,8 +1,9 @@
 {
-    "name": "Coalesce",
-    "rootNamespace": "Coalesce",
+    "name": "Coalesce.Nanny",
+    "rootNamespace": "Coalesce.Nanny",
     "references": [
-        "GUID:8c4dd21966739024fbd72155091d199e"
+        "GUID:45c23eff3c401d749bdf3062b8bfd11c",
+        "GUID:4a8c92c69f5cffa4d89d32fd0c88dac6"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
