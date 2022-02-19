@@ -39,7 +39,7 @@ public class ZillaController : MonoBehaviour, Zilla, IEventSubscriber
             Debug.LogWarning("No animator found in GameObject or any of the children.", this);
         _audio = GetComponent<AudioSource>();
 
-        EventRouter.Subscribe<EventTypes.NannyPickedUpZilla>(this);
+        EventRouter.Subscribe<EventTypes.NannyCanReachZilla>(this);
         EventRouter.Subscribe<EventTypes.NannyPutDownZilla>(this);
     }
 
@@ -89,7 +89,7 @@ public class ZillaController : MonoBehaviour, Zilla, IEventSubscriber
     {
         switch(eventData)
         {
-            case EventTypes.NannyPickedUpZilla zilla:
+            case EventTypes.NannyCanReachZilla zilla:
                 _body.isKinematic = true;
                 enabled = false;
                 break;

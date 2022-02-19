@@ -66,6 +66,7 @@ namespace Coalesce.Nanny
                 new NannyCarryZillaState(),
                 new NannyPutDownZillaState(),
                 new NannyGoHaveARestState(),
+                new NannyRestState(),
             };
             foreach (var state in _states)
                 state.Start(this, _controller);

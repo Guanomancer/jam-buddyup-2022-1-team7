@@ -15,7 +15,7 @@ namespace Coalesce.Nanny
         {
             if(Controller.CompareTarget(Nanny.RestTarget) &&
                 Controller.DistanceToTarget < 1.5f)
-                Nanny.Transition<NannyIdleState>();
+                Nanny.Transition<NannyRestState>();
         }
     }
 }

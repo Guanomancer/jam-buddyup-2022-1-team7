@@ -65,7 +65,6 @@ namespace Coalesce.Nanny
         public void EndPickup()
         {
             _animator.SetBool("Pickup", false);
-            //EventRouter.Dispatch(new EventTypes.NannyPickedUpZilla { });
         }
 
         public void Putdown()
@@ -76,7 +75,6 @@ namespace Coalesce.Nanny
         public void EndPutdown()
         {
             _animator.SetBool("Putdown", false);
-            //EventRouter.Dispatch(new EventTypes.NannyPutDownZilla { });
         }
 
         public void StartCarry()
