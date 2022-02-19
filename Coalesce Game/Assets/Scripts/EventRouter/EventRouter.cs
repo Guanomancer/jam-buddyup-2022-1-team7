@@ -9,6 +9,7 @@ namespace Coalesce.EventRouting
         private static Dictionary<Type, List<IEventSubscriber>> _subscribers = new Dictionary<Type, List<IEventSubscriber>>();
 
         private static HashSet<string> _eventTypesToDisplay = new HashSet<string>();
+        private static HashSet<string> _eventTypesToNotDisplay = new HashSet<string>();
         private static bool _displayAllEvents;
 
         public static void DisplayAllEvents()
@@ -25,8 +26,8 @@ namespace Coalesce.EventRouting
 
         public static void DontDisplayEventType(string typeName)
         {
-            if (!_eventTypesToDisplay.Contains(typeName))
-                _eventTypesToDisplay.Add(typeName);
+            if (!_eventTypesToNotDisplay.Contains(typeName))
+                _eventTypesToNotDisplay.Add(typeName);
         }
 
         public static void Subscribe<T>(IEventSubscriber subscriber)
@@ -51,7 +52,8 @@ namespace Coalesce.EventRouting
             where T : EventData
         {
 #if UNITY_EDITOR
-            if (_displayAllEvents || _eventTypesToDisplay.Contains(typeof(T).Name))
+            if ((_displayAllEvents && !_eventTypesToNotDisplay.Contains(typeof(T).Name)) ||
+                (!_displayAllEvents && _eventTypesToDisplay.Contains(typeof(T).Name)))
                 Debug.Log($"{typeof(T).Name} occured.\n{eventData}");
 #endif
 

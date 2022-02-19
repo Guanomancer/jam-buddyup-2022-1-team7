@@ -10,6 +10,8 @@ namespace Coalesce.EventRouting
         private bool _displayAllEventTypes = true;
         [SerializeField]
         private string[] _eventTypesToDisplay;
+        [SerializeField]
+        private string[] _eventTypesToNotDisplay;
 
         private void Awake()
         {
@@ -18,6 +20,9 @@ namespace Coalesce.EventRouting
 
             foreach (var eventType in _eventTypesToDisplay)
                 EventRouter.DisplayEventType(eventType);
+
+            foreach (var eventType in _eventTypesToNotDisplay)
+                EventRouter.DontDisplayEventType(eventType);
         }
     }
 }
