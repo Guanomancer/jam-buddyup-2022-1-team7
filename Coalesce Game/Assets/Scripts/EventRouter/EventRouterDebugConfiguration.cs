@@ -7,6 +7,8 @@ namespace Coalesce.EventRouting
     public class EventRouterDebugConfiguration : MonoBehaviour
     {
         [SerializeField]
+        private Color _consoleMessageColor = new Color(0, 0, .8f);
+        [SerializeField]
         private bool _displayAllEventTypes = true;
         [SerializeField]
         private string[] _eventTypesToDisplay;
@@ -23,6 +25,8 @@ namespace Coalesce.EventRouting
 
             foreach (var eventType in _eventTypesToNotDisplay)
                 EventRouter.DontDisplayEventType(eventType);
+
+            EventRouter.ConsoleColor = _consoleMessageColor;
         }
     }
 }

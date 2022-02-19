@@ -11,6 +11,7 @@ namespace Coalesce.EventRouting
         private static HashSet<string> _eventTypesToDisplay = new HashSet<string>();
         private static HashSet<string> _eventTypesToNotDisplay = new HashSet<string>();
         private static bool _displayAllEvents;
+        public static Color ConsoleColor = new Color(0, 0, .8f);
 
         public static void DisplayAllEvents()
             => _displayAllEvents = true;
@@ -35,7 +36,7 @@ namespace Coalesce.EventRouting
         {
             if (!_subscribers.ContainsKey(typeof(T)))
                 _subscribers.Add(typeof(T), new List<IEventSubscriber>());
-            
+
             _subscribers[typeof(T)].Add(subscriber);
         }
 
@@ -54,7 +55,12 @@ namespace Coalesce.EventRouting
 #if UNITY_EDITOR
             if ((_displayAllEvents && !_eventTypesToNotDisplay.Contains(typeof(T).Name)) ||
                 (!_displayAllEvents && _eventTypesToDisplay.Contains(typeof(T).Name)))
-                Debug.Log($"{typeof(T).Name} occured.\n{eventData}");
+                Debug.Log(string.Format("<color=#{0:X2}{1:X2}{2:X2}>A {3} event occured.</color>\n{4}",
+                    (byte)(ConsoleColor.r * 255f),
+                    (byte)(ConsoleColor.g * 255f),
+                    (byte)(ConsoleColor.b * 255f),
+                    typeof(T).Name,
+                    eventData));
 #endif
 
             if (!_subscribers.ContainsKey(typeof(T)))
