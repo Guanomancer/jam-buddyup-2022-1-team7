@@ -1194,7 +1194,6 @@ GameObject:
   - component: {fileID: 923101448}
   - component: {fileID: 923101447}
   - component: {fileID: 923101446}
-  - component: {fileID: 923101445}
   - component: {fileID: 923101444}
   - component: {fileID: 923101443}
   m_Layer: 5
@@ -1332,18 +1331,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b604b290f535b1479e30a1d23985393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &923101445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 923101441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de5c1ba66c51314e96c3a22bcc69ba6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &923101446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1388,9 +1375,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 923101441}
-        m_TargetAssemblyTypeName: Coalesce.TransitionButton, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 1877587357}
+        m_TargetAssemblyTypeName: Coalesce.ButtonManager, Assembly-CSharp
+        m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3438,6 +3425,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1877587350 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3638015083459035954, guid: b7c109339ea227947b03b1b15ccb921c, type: 3}
+  m_PrefabInstance: {fileID: 1168957242}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1877587357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877587350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da1d3521298102240b9bc2bb92626560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scoreScreen: {fileID: 0}
 --- !u!1 &1939307653
 GameObject:
   m_ObjectHideFlags: 0
