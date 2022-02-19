@@ -24,6 +24,7 @@ namespace Coalesce.Nanny
 
         private NavMeshAgent _agent;
         private Animator _animator;
+        private PerimeterBlockDetector _detector;
 
         private NavMeshPath _path;
         private NavMeshPath _currentPath;
@@ -67,6 +68,25 @@ namespace Coalesce.Nanny
             _animator.SetBool("Pickup", false);
         }
 
+        public void PickupBlock()
+        {
+            _animator.SetBool("PickupBlock", true);
+        }
+
+        public void EndPickupBlock()
+        {
+            _animator.SetBool("PickupBlock", false);
+            var block = _detector.GetBlockClosestTo(transform.position);
+            var count = 0;
+            do
+            {
+                _detector.RemoveBlockFromReachList(block);
+                Destroy(block.gameObject);
+                count++;
+                block = _detector.GetBlockClosestTo(transform.position);
+            } while (block != null && count < Settings.Game.MaxBlocksToPickUpAtOnce);
+        }
+
         public void Putdown()
         {
             _animator.SetBool("Putdown", true);
@@ -94,6 +114,7 @@ namespace Coalesce.Nanny
         {
             _agent = GetComponent<NavMeshAgent>();
             _animator = GetComponentInChildren<Animator>();
+            _detector = GetComponent<PerimeterBlockDetector>();
             _path = new NavMeshPath();
         }
 
@@ -125,7 +146,7 @@ namespace Coalesce.Nanny
 
         private bool CanReachZilla
             => _navigationTarget != null &&
-                    _navigationTarget.GetComponent<Zilla>() != null &&
+                    _navigationTarget.GetComponent<IZilla>() != null &&
                     Vector3.Magnitude(_navigationTarget.position - transform.position) <= _reachDistance;
     }
 }

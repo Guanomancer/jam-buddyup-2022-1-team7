@@ -6,7 +6,7 @@ using Coalesce.EventRouting;
 
 namespace Coalesce
 {
-    public class BlockController : MonoBehaviour, BatchUpdatable
+    public class BlockController : MonoBehaviour, IBlock, BatchUpdatable
     {
         [SerializeField]
         private bool _countTowardsScore = true;
@@ -47,6 +47,8 @@ namespace Coalesce
                 _messyBlocks.Add(this);
                 _rightBlocks.Remove(this);
                 EventRouter.Dispatch(new EventTypes.ScoringBlockMessy { });
+                if(_messyBlocks.Count == 1)
+                    EventRouter.Dispatch(new EventTypes.FirstScoringBlockMessy { });
                 if (_rightBlocks.Count == 0)
                     EventRouter.Dispatch(new EventTypes.AllScoringBlocksMessy { });
             }

@@ -1,7 +1,9 @@
 {
     "name": "Coalesce.EventRouting",
     "rootNamespace": "Coalesce.EventRouting",
-    "references": [],
+    "references": [
+        "GUID:4a8c92c69f5cffa4d89d32fd0c88dac6"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

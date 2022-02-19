@@ -18,7 +18,7 @@ namespace Coalesce.Nanny
         {
             EventRouter.Unsubscribe<EventTypes.NannyFoundMessyBlock>(this);
             EventRouter.Unsubscribe<EventTypes.NannyCanReachZilla>(this);
-            Controller.SetNavigationTarget(null);
+            Controller.ClearNavigationTarget();
         }
 
         public void OnEvent<T>(T eventData)

@@ -12,5 +12,8 @@ namespace Coalesce.Nanny
 
         public void PutdownEnd()
             => EventRouter.Dispatch(new EventTypes.NannyPutDownZilla { });
+
+        public void PickupBlockEnd()
+            => EventRouter.Dispatch(new EventTypes.NannyPickedUpMessyBlocks { });
     }
 }

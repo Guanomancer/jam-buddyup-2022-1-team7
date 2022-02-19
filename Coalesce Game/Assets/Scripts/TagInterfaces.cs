@@ -4,5 +4,6 @@ using UnityEngine;
 
 namespace Coalesce
 {
-    public interface Zilla { }
+    public interface IZilla { }
+    public interface IBlock { bool IsMessy(); Transform transform { get; } GameObject gameObject { get; } }
 }
