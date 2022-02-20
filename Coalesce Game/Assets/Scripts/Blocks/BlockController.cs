@@ -102,9 +102,6 @@ namespace Coalesce
 #if UNITY_EDITOR
             if (_isMessy)
                 GetComponentInChildren<MeshRenderer>().material.SetColor("_Highlight_Color", Color.red);
-#else
-            if (_isMessy)
-                GetComponentInChildren<MeshRenderer>().material.SetColor("_Highlight_Color", Color.red);
 #endif
 
             return _isMessy;
