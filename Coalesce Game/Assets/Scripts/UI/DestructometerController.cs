@@ -16,7 +16,7 @@ namespace Coalesce.UI
         private float[] _powerupPercentages;
 
         [SerializeField, Range(0, 1)]
-        private static float _destruction = 1f;
+        private static float _destruction = 0f;
         public static float Destruction
         {
             get => _destruction;
