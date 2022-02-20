@@ -53,5 +53,10 @@ namespace Coalesce
         private int _maxBlocksToPickUpAtOnce = 5;
         public int MaxBlocksToPickUpAtOnce
             => _maxBlocksToPickUpAtOnce;
+
+        [Header("Gameplay")]
+        [SerializeField]
+        private float _blockGraceRatio = 0.05f;
+        public float BlockGraceRatio => _blockGraceRatio;
     }
 }

@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Coalesce
+namespace Coalesce.DeadCode
 {
     public class DestructometerController : MonoBehaviour
     {

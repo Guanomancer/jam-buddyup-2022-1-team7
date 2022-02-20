@@ -19,7 +19,7 @@ namespace Coalesce.Nanny
         private Transform _zillaCarryCameraFocusAnchor;
         [SerializeField]
         private Transform _zillaCarryReference;
-
+        
         private Transform _navigationTarget;
 
         private NavMeshAgent _agent;

@@ -14,26 +14,30 @@ namespace Coalesce
         private Vector3 _originalPosition;
         private Quaternion _originalRotation;
         private bool _isMessy;
+        private bool _originHasBeenSet;
 
         private static List<BlockController> _allBlocks = new List<BlockController>();
         private static List<BlockController> _rightBlocks = new List<BlockController>();
         private static List<BlockController> _messyBlocks = new List<BlockController>();
-        private static int _totalScoringBlocks = 0;
+        private static int _totalScoringBlocks;
+        private static float _totalScoringBlocksFloat;
 
         public static int TotalScoringBlocks => _totalScoringBlocks;
         public static int MessyBlocks => _messyBlocks.Count;
-        public static float DestructionRatio => (float)TotalScoringBlocks / MessyBlocks;
+        public static float DestructionRatio => (float)MessyBlocks / TotalScoringBlocks;
 
         private void Start()
         {
             if(_countTowardsScore)
             {
                 BatchUpdater.RequestBatchUpdatingForScene();
-                _totalScoringBlocks++;
+                _totalScoringBlocksFloat++;
                 _allBlocks.Add(this);
                 _rightBlocks.Add(this);
                 BatchUpdater.RegisterForUpdating<BlockController>(this);
             }
+
+            _totalScoringBlocks = Mathf.RoundToInt(_totalScoringBlocksFloat * (1f - Settings.Game.BlockGraceRatio));
         }
 
         public void BatchStarting()
@@ -47,8 +51,13 @@ namespace Coalesce
                 _messyBlocks.Add(this);
                 _rightBlocks.Remove(this);
                 EventRouter.Dispatch(new EventTypes.ScoringBlockMessy { });
-                if(_messyBlocks.Count == 1)
+                Debug.Log($"{TotalScoringBlocks} / {MessyBlocks} = {DestructionRatio}");
+                DestructometerController.Destruction = DestructionRatio;
+                if (_messyBlocks.Count == 1)
+                {
                     EventRouter.Dispatch(new EventTypes.FirstScoringBlockMessy { });
+                    EventRouter.Dispatch(new EventTypes.GameStart { });
+                }
                 if (_rightBlocks.Count == 0)
                     EventRouter.Dispatch(new EventTypes.AllScoringBlocksMessy { });
             }
@@ -67,10 +76,13 @@ namespace Coalesce
         {
             _originalPosition = transform.position;
             _originalRotation = transform.rotation;
+            _originHasBeenSet = true;
         }
 
         public bool IsMessy()
         {
+            if (!_countTowardsScore || !_originHasBeenSet)
+                return false;
             if (_isMessy)
                 return true;
             

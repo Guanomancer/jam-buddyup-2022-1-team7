@@ -37,26 +37,32 @@ namespace Coalesce.EventRouting
 
         public static void Subscribe<T>(IEventSubscriber subscriber)
             where T : IEventData
+            => Subscribe(typeof(T), subscriber);
+
+        public static void Subscribe(Type type, IEventSubscriber subscriber)
         {
-            if (!_subscribers.ContainsKey(typeof(T)))
-                _subscribers.Add(typeof(T), new List<IEventSubscriber>());
+            if (!_subscribers.ContainsKey(type))
+                _subscribers.Add(type, new List<IEventSubscriber>());
 
             if (_isDispatching)
-                _addWaitingList.Add((typeof(T), subscriber));
+                _addWaitingList.Add((type, subscriber));
             else
-                _subscribers[typeof(T)].Add(subscriber);
+                _subscribers[type].Add(subscriber);
         }
 
         public static void Unsubscribe<T>(IEventSubscriber subscriber)
             where T : IEventData
+            => Unsubscribe(typeof(T), subscriber);
+
+        public static void Unsubscribe(Type type, IEventSubscriber subscriber)
         {
-            if (!_subscribers.ContainsKey(typeof(T)))
+            if (!_subscribers.ContainsKey(type))
                 return;
 
             if (_isDispatching)
-                _removeWaitingList.Add((typeof(T), subscriber));
+                _removeWaitingList.Add((type, subscriber));
             else
-                _subscribers[typeof(T)].Remove(subscriber);
+                _subscribers[type].Remove(subscriber);
         }
 
         public static void Dispatch<T>(T eventData)
