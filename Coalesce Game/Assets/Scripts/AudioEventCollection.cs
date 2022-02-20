@@ -8,6 +8,8 @@ namespace Coalesce
     public class AudioEventCollection : ScriptableObject
     {
         [SerializeField]
+        private float _volumeScale = 1f;
+        [SerializeField]
         private AudioClip[] _audioClips;
         public IReadOnlyList<AudioClip> AudioClips
             => _audioClips;
@@ -20,7 +22,10 @@ namespace Coalesce
         private float _firstEventDelay = -1f;
         [SerializeField]
         private float _intervalDelay = -1f;
-        
+        [SerializeField]
+        private bool _ignoreOneShotDelay;
+        public bool IgnoreOneShotDelay => _ignoreOneShotDelay;
+
         [System.NonSerialized]
         private int _lastIndex;
         [System.NonSerialized]
@@ -61,7 +66,7 @@ namespace Coalesce
 
             var clip = GetRandom();
             Debug.Log($"Nanny says '<color='#00ff00'>{clip.name}</color>' from clip collection {name}");
-            audioSource.PlayOneShot(clip);
+            audioSource.PlayOneShot(clip, _volumeScale);
 
             if(_intervalDelay != -1)
                 _disableUntilTime = Time.time + _intervalDelay;

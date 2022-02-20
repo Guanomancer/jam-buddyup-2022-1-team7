@@ -39,6 +39,7 @@ namespace Coalesce.EventRouting
         public struct ZillaEntersRoom : IEventData { }
         public struct ZillaLeftFoot : IEventData { }
         public struct ZillaRightFoot : IEventData { }
+        public struct ZillaRandomFoot : IEventData { }
 
         // Blocks
         public struct ScoringBlocksStable : IEventData { }

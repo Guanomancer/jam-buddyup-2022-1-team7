@@ -31,9 +31,6 @@ namespace Coalesce.Audio
 
         public void OnEvent<T>(T eventData) where T : IEventData
         {
-            if (Time.time < _nextOneShotAllowed)
-                return;
-            
             switch (eventData)
             {
                 default:
@@ -42,9 +39,12 @@ namespace Coalesce.Audio
                     {
                         if (clip.name == name)
                         {
+                            if (!clip.IgnoreOneShotDelay && Time.time < _nextOneShotAllowed)
+                                continue;
                             if (clip.ComplexPlay(_audio))
                             {
-                                _nextOneShotAllowed = Time.time + _delayBetweenOneShots;
+                                if(!clip.IgnoreOneShotDelay)
+                                    _nextOneShotAllowed = Time.time + _delayBetweenOneShots;
                                 return;
                             }
                         }

@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 069f871cb0c258a4f9cea50b7e0773a2, type: 3}
-  m_Name: ZillaLeftFoot
+  m_Name: ZillaRightFoot
   m_EditorClassIdentifier: 
   _volumeScale: 0.25
   _audioClips:
-  - {fileID: 8300000, guid: ec16989401785e54f8714726e2b2e98d, type: 3}
-  - {fileID: 8300000, guid: a7e82cb0ba601b749a380d94b0712afc, type: 3}
-  - {fileID: 8300000, guid: ba3a91e65586d2546b339c84a30677b0, type: 3}
+  - {fileID: 8300000, guid: f68f9a17b59c2c6498f24aa75ba4bf20, type: 3}
+  - {fileID: 8300000, guid: 03c96a6eea9b9514bb76683cc750fc04, type: 3}
+  - {fileID: 8300000, guid: bf42da87a8f752e479b028ad802bf52b, type: 3}
   _neverPlayTheSameClipTwice: 1
   _skipFirstEvent: 0
   _firstEventDelay: -1
