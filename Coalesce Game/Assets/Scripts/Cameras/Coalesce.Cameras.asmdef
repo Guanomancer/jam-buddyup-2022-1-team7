@@ -2,7 +2,8 @@
     "name": "Coalesce.Cameras",
     "rootNamespace": "Coalesce.Cameras",
     "references": [
-        "GUID:75469ad4d38634e559750d17036d5f7c"
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:4a8c92c69f5cffa4d89d32fd0c88dac6"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

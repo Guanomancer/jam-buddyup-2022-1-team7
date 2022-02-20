@@ -22,7 +22,9 @@ namespace Coalesce.Cameras
             => _currentDistantTarget;
 
         private void Awake()
-            => _currentDistantTarget = _distantTarget;
+        {
+            _currentDistantTarget = _distantTarget;
+        }
 
         public void ToggleCursor()
         {
