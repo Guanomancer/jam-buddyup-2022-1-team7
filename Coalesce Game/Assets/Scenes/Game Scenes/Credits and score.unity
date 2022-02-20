@@ -217,7 +217,7 @@ RectTransform:
   - {fileID: 1579481082}
   - {fileID: 733368395}
   m_Father: {fileID: 912724524}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -664,7 +664,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -919,8 +919,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 78915755}
   - {fileID: 2058524672}
+  - {fileID: 78915755}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1116,11 +1116,10 @@ GameObject:
   - component: {fileID: 1190846673}
   - component: {fileID: 1190846672}
   - component: {fileID: 1190846671}
-  - component: {fileID: 1190846670}
   - component: {fileID: 1190846669}
   - component: {fileID: 1190846668}
   m_Layer: 5
-  m_Name: Retry Button (1)
+  m_Name: Continue Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1254,18 +1253,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b604b290f535b1479e30a1d23985393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1190846670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1190846666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de5c1ba66c51314e96c3a22bcc69ba6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1190846671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1310,10 +1297,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1190846670}
-        m_TargetAssemblyTypeName: Coalesce.TransitionButton, Assembly-CSharp
-        m_MethodName: Transition
-        m_Mode: 3
+      - m_Target: {fileID: 1774448768}
+        m_TargetAssemblyTypeName: Coalesce.ButtonManager, Assembly-CSharp
+        m_MethodName: Continue
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1418,7 +1405,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4ca48cf7ebe1f8547ad09b8256604582, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 46bd926dc03f5264997fb0aadf52e889, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1730,6 +1717,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1579481081}
   m_CullTransparentMesh: 1
+--- !u!1 &1774448761 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3638015083459035954, guid: b7c109339ea227947b03b1b15ccb921c, type: 3}
+  m_PrefabInstance: {fileID: 1168957242}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1774448768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774448761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da1d3521298102240b9bc2bb92626560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scoreScreen: {fileID: 78915754}
 --- !u!1 &1850403310
 GameObject:
   m_ObjectHideFlags: 0
@@ -1951,7 +1956,7 @@ RectTransform:
   - {fileID: 1286588886}
   - {fileID: 1190846667}
   m_Father: {fileID: 912724524}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
