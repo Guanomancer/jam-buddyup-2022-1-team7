@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _messynessMagnitudeThreshold: 0.3
   _messynessSpinThreshold: 30
-  _batchUpdaterTimeDelay: 2
+  _batchUpdaterTimeDelay: 10
   _blockCollisionSounds: {fileID: 11400000, guid: 6c182d703fdab9148b7e2ebdc7433def, type: 2}
   _blockCollisionSoundTriggerImpulseThreshold: 3
   _blockCollisionSoundTriggerVelocityThreshold: 0.5
@@ -46,4 +46,3 @@ MonoBehaviour:
   _messyBlockDetectionRadius: 1
   _maxBlocksToPickUpAtOnce: 5
   _blockGraceRatio: 0.05
-  _gameLengthInSeconds: 300
