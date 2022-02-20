@@ -21,9 +21,10 @@ namespace Coalesce
         private static List<BlockController> _messyBlocks = new List<BlockController>();
         private static int _totalScoringBlocks;
         private static float _totalScoringBlocksFloat;
+        private static int _totalMessyBlocks;
 
         public static int TotalScoringBlocks => _totalScoringBlocks;
-        public static int MessyBlocks => _messyBlocks.Count;
+        public static int MessyBlocks => _totalMessyBlocks;
         public static float DestructionRatio => (float)MessyBlocks / TotalScoringBlocks;
 
         private void Start()
@@ -50,6 +51,7 @@ namespace Coalesce
             {
                 BatchUpdater.UnregisterForUpdating<BlockController>(this);
                 _messyBlocks.Add(this);
+                _totalMessyBlocks++;
                 _rightBlocks.Remove(this);
                 EventRouter.Dispatch(new EventTypes.ScoringBlockMessy { DestructionRatio = DestructionRatio });
                 Debug.Log($"{MessyBlocks} / {TotalScoringBlocks} = {DestructionRatio}");
