@@ -59,13 +59,13 @@ namespace Coalesce
                     MessyBlocks = _totalMessyBlocks,
                     DestructionRatio = DestructionRatio,
                 });
-                //Debug.Log($"{MessyBlocks} / {TotalScoringBlocks} = {DestructionRatio}");
+                Debug.Log($"{MessyBlocks} / {TotalScoringBlocks} = {DestructionRatio}");
                 if (_messyBlocks.Count == 1)
                 {
                     EventRouter.Dispatch(new EventTypes.FirstScoringBlockMessy { });
                     EventRouter.Dispatch(new EventTypes.GameStart { });
                 }
-                if (_rightBlocks.Count == 0)
+                if (DestructionRatio == 1f)
                 {
                     EventRouter.Dispatch(new EventTypes.AllScoringBlocksMessy { });
                     EventRouter.Dispatch(new EventTypes.GameEnd { });
