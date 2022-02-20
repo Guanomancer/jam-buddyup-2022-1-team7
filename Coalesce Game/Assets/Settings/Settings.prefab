@@ -58,6 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796c3c473ef537b43a75b252f7efb9d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _consoleMessageColor: {r: 0, g: 0.55538887, b: 0.8, a: 1}
   _displayAllEventTypes: 1
   _eventTypesToDisplay: []
   _eventTypesToNotDisplay:

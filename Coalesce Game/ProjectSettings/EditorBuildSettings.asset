@@ -6,6 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Construction Scenes/Nanny Construction.unity
-    guid: 93aae4963aa4aa24188cf355213fc86f
+    path: Assets/Scenes/Intro Scene.unity
+    guid: ca50ca934a7e485498be9b2fcf2ed473
+  - enabled: 1
+    path: Assets/Scenes/Menu Main.unity
+    guid: 17936cc8687cd7c47b5ec6e2121581ab
+  - enabled: 1
+    path: Assets/Scenes/Game Scene.unity
+    guid: 625e393dd32b9e94b8b14305f01b5617
+  - enabled: 1
+    path: Assets/Scenes/Ending Scene.unity
+    guid: 0b456dd5efdc1f744bc545176141e3be
+  - enabled: 1
+    path: Assets/Scenes/Credits and score.unity
+    guid: c3cfe1a2dd7740e4faeb5d9663f785c1
   m_configObjects: {}

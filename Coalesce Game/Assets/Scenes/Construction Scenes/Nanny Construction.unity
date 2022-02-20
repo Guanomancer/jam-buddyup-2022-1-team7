@@ -3077,10 +3077,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1568965223074533923, guid: 63ab9c907eb261843a72685e8226e596, type: 3}
-      propertyPath: _consoleMessageColor.g
-      value: 0.55538887
-      objectReference: {fileID: 0}
     - target: {fileID: 1568965223074533948, guid: 63ab9c907eb261843a72685e8226e596, type: 3}
       propertyPath: m_RootOrder
       value: 1
