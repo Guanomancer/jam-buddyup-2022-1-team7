@@ -16,7 +16,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 854daaadfb7e1b04387b6873d2b620f6, type: 3}
   - {fileID: 8300000, guid: b5257375f6b006c43a08e5693e60fb65, type: 3}
   - {fileID: 8300000, guid: a168aef697b125a469592e8e8a7a4fa8, type: 3}
+  - {fileID: 8300000, guid: 3da494e857571844cba31c5140cbfec5, type: 3}
+  - {fileID: 8300000, guid: 7b2adc003cec5df4f99ce4d5c29706aa, type: 3}
+  - {fileID: 8300000, guid: 6503115ee6e6f524581fffd7bb72f488, type: 3}
+  - {fileID: 8300000, guid: ff10466b0b9806549a8d33d35dcbf54d, type: 3}
   _neverPlayTheSameClipTwice: 1
   _skipFirstEvent: 1
-  _firstEventDelay: 15
-  _intervalDelay: 30
+  _firstEventDelay: 12
+  _intervalDelay: 12

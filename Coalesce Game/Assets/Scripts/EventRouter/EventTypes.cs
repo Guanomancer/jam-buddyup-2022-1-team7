@@ -32,6 +32,7 @@ namespace Coalesce.EventRouting
         public struct NannyPutDownZilla : IEventData { }
         public struct NannyStartedMoving : IEventData { }
         public struct NannyStoppedMoving : IEventData { }
+        public struct NannyGoingToRest : IEventData { };
 
         // Zilla
         public struct ZillaAproachesDoor : IEventData { }

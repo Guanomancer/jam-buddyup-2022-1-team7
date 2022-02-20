@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Coalesce.EventRouting;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +10,7 @@ namespace Coalesce.Nanny
         public override void OnEnter()
         {
             Controller.SetNavigationTarget(Nanny.RestTarget);
+            EventRouter.Dispatch(new EventTypes.NannyGoingToRest { });
         }
 
         public override void OnUpdate()

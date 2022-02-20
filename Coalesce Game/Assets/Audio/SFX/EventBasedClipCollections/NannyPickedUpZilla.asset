@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 069f871cb0c258a4f9cea50b7e0773a2, type: 3}
+  m_Name: NannyPickedUpZilla
+  m_EditorClassIdentifier: 
+  _audioClips:
+  - {fileID: 8300000, guid: df90da28225d4544d88878a24c17c5af, type: 3}
+  - {fileID: 8300000, guid: f0f55ff49b124c0409c966c61b341e49, type: 3}
+  - {fileID: 8300000, guid: 9d52ac8ba90ade74a91628687851ae9c, type: 3}
+  - {fileID: 8300000, guid: 2b913eeb3d2abeb4c858b490d1516982, type: 3}
+  - {fileID: 8300000, guid: 379e482fd0c28464a814347c2f72249d, type: 3}
+  - {fileID: 8300000, guid: 1f0f9a487244e0646b836dca88b2a21a, type: 3}
+  - {fileID: 8300000, guid: d0a0f6ef66fe1aa4e926d1828717c1a0, type: 3}
+  - {fileID: 8300000, guid: b2615d38fd5f2ee4a83459f3ce51dc5b, type: 3}
+  - {fileID: 8300000, guid: b05cd8fcd5f457b49b192c891e80d5d6, type: 3}
+  - {fileID: 8300000, guid: de439789dc9415a45b598e5781b25aed, type: 3}
+  _neverPlayTheSameClipTwice: 1
+  _skipFirstEvent: 0
+  _firstEventDelay: -1
+  _intervalDelay: -1

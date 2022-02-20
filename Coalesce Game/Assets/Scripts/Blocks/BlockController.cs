@@ -54,7 +54,7 @@ namespace Coalesce
                 _totalMessyBlocks++;
                 _rightBlocks.Remove(this);
                 EventRouter.Dispatch(new EventTypes.ScoringBlockMessy { DestructionRatio = DestructionRatio });
-                Debug.Log($"{MessyBlocks} / {TotalScoringBlocks} = {DestructionRatio}");
+                //Debug.Log($"{MessyBlocks} / {TotalScoringBlocks} = {DestructionRatio}");
                 if (_messyBlocks.Count == 1)
                 {
                     EventRouter.Dispatch(new EventTypes.FirstScoringBlockMessy { });
