@@ -7543,6 +7543,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891139272}
     m_Modifications:
+    - target: {fileID: 1912980883, guid: e55e905b05c951d40ade46fd0ab89b25, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 502261722164150803, guid: e55e905b05c951d40ade46fd0ab89b25, type: 3}
       propertyPath: m_Name
       value: Teal Cylinder

@@ -28,16 +28,17 @@ namespace Coalesce
 
         private void Start()
         {
-            if(_countTowardsScore)
+            if (_countTowardsScore)
             {
                 BatchUpdater.RequestBatchUpdatingForScene();
                 _totalScoringBlocksFloat++;
+                _totalScoringBlocks = Mathf.RoundToInt(_totalScoringBlocksFloat * (1f - Settings.Game.BlockGraceRatio));
                 _allBlocks.Add(this);
                 _rightBlocks.Add(this);
                 BatchUpdater.RegisterForUpdating<BlockController>(this);
             }
-
-            _totalScoringBlocks = Mathf.RoundToInt(_totalScoringBlocksFloat * (1f - Settings.Game.BlockGraceRatio));
+            else
+                GetComponentInChildren<NavMeshObstacle>().enabled = false;
         }
 
         public void BatchStarting()
@@ -51,7 +52,7 @@ namespace Coalesce
                 _messyBlocks.Add(this);
                 _rightBlocks.Remove(this);
                 EventRouter.Dispatch(new EventTypes.ScoringBlockMessy { });
-                Debug.Log($"{TotalScoringBlocks} / {MessyBlocks} = {DestructionRatio}");
+                Debug.Log($"{MessyBlocks} / {TotalScoringBlocks} = {DestructionRatio}");
                 DestructometerController.Destruction = DestructionRatio;
                 if (_messyBlocks.Count == 1)
                 {
