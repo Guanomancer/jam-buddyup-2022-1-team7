@@ -14,8 +14,19 @@ namespace Coalesce
 
         [SerializeField]
         private bool _neverPlayTheSameClipTwice = true;
-
+        [SerializeField]
+        private bool _skipFirstEvent = false;
+        [SerializeField]
+        private float _firstEventDelay = -1f;
+        [SerializeField]
+        private float _intervalDelay = -1f;
+        
+        [System.NonSerialized]
         private int _lastIndex;
+        [System.NonSerialized]
+        private bool _isFirst = true;
+        [System.NonSerialized]
+        private float _disableUntilTime;
 
         public AudioClip GetRandom()
         {
@@ -27,13 +38,35 @@ namespace Coalesce
                     do
                     {
                         var index = Random.Range(0, _audioClips.Length);
-                        if (index != _lastIndex || _neverPlayTheSameClipTwice)
+                        if (!_neverPlayTheSameClipTwice || index != _lastIndex)
                         {
                             _lastIndex = index;
                             return _audioClips[index];
                         }
                     } while (true);
             }
+        }
+
+        public bool ComplexPlay(AudioSource audioSource)
+        {
+            if (_isFirst && _skipFirstEvent)
+            {
+                _isFirst = false;
+                if (_firstEventDelay != -1)
+                    _disableUntilTime = Time.time + _firstEventDelay;
+                return false;
+            }
+            if (Time.time < _disableUntilTime)
+                return false;
+
+            var clip = GetRandom();
+            Debug.Log($"Nanny says '<color='#00ff00'>{clip.name}</color>' from clip collection {name}");
+            audioSource.PlayOneShot(clip);
+
+            if(_intervalDelay != -1)
+                _disableUntilTime = Time.time + _intervalDelay;
+
+            return true;
         }
     }
 }

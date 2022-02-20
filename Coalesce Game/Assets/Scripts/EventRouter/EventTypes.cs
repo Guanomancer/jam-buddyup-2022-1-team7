@@ -4,6 +4,17 @@ namespace Coalesce.EventRouting
 {
     public static class EventTypes
     {
+        public static bool EventTypeFromString(string typeName, out Type type)
+        {
+            type = typeof(EventTypes).GetNestedType(typeName);
+            return type != null;
+        }
+
+        public static Type[] GetAll()
+        {
+            return typeof(EventTypes).GetNestedTypes();
+        }
+
         // Game flow
         public struct TutorialStart : IEventData { }
         public struct GameStart : IEventData { }
@@ -14,8 +25,6 @@ namespace Coalesce.EventRouting
         public struct NannyStateChanged : IEventData { public Type NewState; public override string ToString() => NewState.Name; }
         public struct NannyEntersRoom : IEventData { }
         public struct NannyClosedDoor : IEventData { }
-
-        // Nanny Controller
         public struct NannyFoundMessyBlock : IEventData { }
         public struct NannyPickedUpMessyBlocks : IEventData { }
         public struct NannyCanReachZilla : IEventData { }

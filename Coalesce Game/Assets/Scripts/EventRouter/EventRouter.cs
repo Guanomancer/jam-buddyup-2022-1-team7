@@ -13,7 +13,7 @@ namespace Coalesce.EventRouting
         private static bool _displayAllEvents;
         public static Color ConsoleColor = new Color(0, 0, .8f);
 
-        private static bool _isDispatching;
+        private static int _isDispatching;
         private static List<(Type, IEventSubscriber)> _addWaitingList = new List<(Type, IEventSubscriber)>();
         private static List<(Type, IEventSubscriber)> _removeWaitingList = new List<(Type, IEventSubscriber)>();
 
@@ -44,7 +44,7 @@ namespace Coalesce.EventRouting
             if (!_subscribers.ContainsKey(type))
                 _subscribers.Add(type, new List<IEventSubscriber>());
 
-            if (_isDispatching)
+            if (_isDispatching > 0)
                 _addWaitingList.Add((type, subscriber));
             else
                 _subscribers[type].Add(subscriber);
@@ -59,7 +59,7 @@ namespace Coalesce.EventRouting
             if (!_subscribers.ContainsKey(type))
                 return;
 
-            if (_isDispatching)
+            if (_isDispatching > 0)
                 _removeWaitingList.Add((type, subscriber));
             else
                 _subscribers[type].Remove(subscriber);
@@ -82,18 +82,21 @@ namespace Coalesce.EventRouting
             if (!_subscribers.ContainsKey(typeof(T)))
                 return;
 
-            _isDispatching = true;
+            _isDispatching++;
             foreach (var subscriber in _subscribers[typeof(T)])
                 subscriber.OnEvent<T>(eventData);
-            _isDispatching = false;
+            _isDispatching--;
 
-            foreach (var subscriber in _addWaitingList)
-                _subscribers[subscriber.Item1].Add(subscriber.Item2);
-            _addWaitingList.Clear();
+            if (_isDispatching == 0)
+            {
+                foreach (var subscriber in _addWaitingList)
+                    _subscribers[subscriber.Item1].Add(subscriber.Item2);
+                _addWaitingList.Clear();
 
-            foreach (var subscriber in _removeWaitingList)
-                _subscribers[subscriber.Item1].Remove(subscriber.Item2);
-            _removeWaitingList.Clear();
+                foreach (var subscriber in _removeWaitingList)
+                    _subscribers[subscriber.Item1].Remove(subscriber.Item2);
+                _removeWaitingList.Clear();
+            }
         }
     }
 

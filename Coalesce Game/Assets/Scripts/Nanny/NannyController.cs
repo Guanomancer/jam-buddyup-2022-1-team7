@@ -53,10 +53,12 @@ namespace Coalesce.Nanny
             => SetNavigationTarget(null);
 
         public float DistanceToTarget
-            => _agent.remainingDistance;
+            => (_navigationTarget.position - transform.position).magnitude;
 
         public bool CompareTarget(Transform target)
-            => _navigationTarget == target;
+        {
+            return _navigationTarget == target;
+        }
 
         public void Pickup()
         {
@@ -81,7 +83,7 @@ namespace Coalesce.Nanny
             do
             {
                 _detector.RemoveBlockFromReachList(block);
-                if(block.gameObject != null)
+                if(block != null && block.gameObject != null)
                 {
                     Destroy(block.gameObject);
                     count++;

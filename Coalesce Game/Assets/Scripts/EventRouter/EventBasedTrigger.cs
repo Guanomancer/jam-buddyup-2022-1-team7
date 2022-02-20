@@ -20,21 +20,15 @@ namespace Coalesce.EventRouting
         private void OnEnable()
         {
             foreach (var typeName in _typeNames)
-                if (TypeFromString(typeName, out Type type))
+                if (EventTypes.EventTypeFromString(typeName, out Type type))
                     EventRouter.Subscribe(type, this);
         }
 
         private void OnDisable()
         {
             foreach (var typeName in _typeNames)
-                if (TypeFromString(typeName, out Type type))
+                if (EventTypes.EventTypeFromString(typeName, out Type type))
                     EventRouter.Subscribe(type, this);
-        }
-
-        private bool TypeFromString(string typeName, out Type type)
-        {
-            type = typeof(EventTypes).GetNestedType(typeName);
-            return type != null;
         }
 
         public void OnEvent<T>(T eventData) where T : IEventData

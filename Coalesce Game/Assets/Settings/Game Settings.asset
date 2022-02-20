@@ -43,7 +43,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _messyBlockDetectionRadius: 2
+  _messyBlockDetectionRadius: 1
   _maxBlocksToPickUpAtOnce: 5
   _blockGraceRatio: 0.05
   _gameLengthInSeconds: 300

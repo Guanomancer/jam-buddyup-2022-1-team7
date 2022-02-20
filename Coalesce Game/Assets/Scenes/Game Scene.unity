@@ -18203,6 +18203,7 @@ GameObject:
   m_Component:
   - component: {fileID: 575901664}
   - component: {fileID: 575901663}
+  - component: {fileID: 575901665}
   m_Layer: 0
   m_Name: SoundScape
   m_TagString: Untagged
@@ -18321,6 +18322,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &575901665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575901662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ade04f2fbabd949a1d1df0cca47e8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _eventClips:
+  - {fileID: 11400000, guid: af6c2f6fe2fcb7a4995ec68da04f76ee, type: 2}
+  - {fileID: 11400000, guid: bdb3d95410c75ab4b8657112515cb0fe, type: 2}
+  - {fileID: 11400000, guid: f871daf2c1a6e2040a89e1b534131fcb, type: 2}
+  - {fileID: 11400000, guid: 1db94d4dbd6ead84bb786c340d224d35, type: 2}
 --- !u!1001 &576024950
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36259,6 +36277,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 575901663}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   _advanceToNextScene: 0
 --- !u!4 &1034518400
 Transform:
@@ -40814,7 +40844,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1149268502}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.58, y: 0.049999237, z: -12.36}
+  m_LocalPosition: {x: -8.003965, y: 0.5, z: -11.567164}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -47166,7 +47196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1861898945203720212, guid: 2a3c9d9d52648cb43adcd63796be06a9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -32.95
+      value: -9.41
       objectReference: {fileID: 0}
     - target: {fileID: 1861898945203720212, guid: 2a3c9d9d52648cb43adcd63796be06a9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -47174,7 +47204,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1861898945203720212, guid: 2a3c9d9d52648cb43adcd63796be06a9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.25
+      value: -12.49
       objectReference: {fileID: 0}
     - target: {fileID: 1861898945203720212, guid: 2a3c9d9d52648cb43adcd63796be06a9, type: 3}
       propertyPath: m_LocalRotation.w
