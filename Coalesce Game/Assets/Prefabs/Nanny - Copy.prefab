@@ -80,7 +80,7 @@ GameObject:
   - component: {fileID: 4903543072675844052}
   - component: {fileID: 337660400}
   m_Layer: 0
-  m_Name: Nanny
+  m_Name: Nanny - Copy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
