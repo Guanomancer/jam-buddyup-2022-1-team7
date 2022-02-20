@@ -51,9 +51,8 @@ namespace Coalesce
                 BatchUpdater.UnregisterForUpdating<BlockController>(this);
                 _messyBlocks.Add(this);
                 _rightBlocks.Remove(this);
-                EventRouter.Dispatch(new EventTypes.ScoringBlockMessy { });
+                EventRouter.Dispatch(new EventTypes.ScoringBlockMessy { DestructionRatio = DestructionRatio });
                 Debug.Log($"{MessyBlocks} / {TotalScoringBlocks} = {DestructionRatio}");
-                DestructometerController.Destruction = DestructionRatio;
                 if (_messyBlocks.Count == 1)
                 {
                     EventRouter.Dispatch(new EventTypes.FirstScoringBlockMessy { });
