@@ -3561,10 +3561,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1939307657}
-        m_TargetAssemblyTypeName: Coalesce.TransitionButton, DeadCode
-        m_MethodName: Transition
-        m_Mode: 3
+      - m_Target: {fileID: 2058524671}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

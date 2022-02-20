@@ -42,7 +42,7 @@ namespace Coalesce.EventRouting
 
         // Blocks
         public struct ScoringBlocksStable : IEventData { }
-        public struct ScoringBlockMessy : IEventData { public float DestructionRatio; }
+        public struct ScoringBlockMessy : IEventData { public int TotalBlocks; public int MessyBlocks; public float DestructionRatio; }
         public struct FirstScoringBlockMessy : IEventData { }
         public struct AllScoringBlocksMessy : IEventData { }
     }

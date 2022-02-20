@@ -1,0 +1,13 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace Coalesce.UI
+{
+    public class ScoreDisplayController : MonoBehaviour
+    {
+        private void Start()
+            => GetComponent<Text>().text = $"{Mathf.Clamp((float)System.Math.Round(FindObjectOfType<ScoreKeeper>().DestructionRatio * 100f, 2), 0f, 100f)}%";
+    }
+}

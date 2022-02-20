@@ -47,13 +47,18 @@ namespace Coalesce
 
         public void BatchUpdate()
         {
-            if(IsMessy())
+            if (IsMessy())
             {
                 BatchUpdater.UnregisterForUpdating<BlockController>(this);
                 _messyBlocks.Add(this);
                 _totalMessyBlocks++;
                 _rightBlocks.Remove(this);
-                EventRouter.Dispatch(new EventTypes.ScoringBlockMessy { DestructionRatio = DestructionRatio });
+                EventRouter.Dispatch(new EventTypes.ScoringBlockMessy
+                {
+                    TotalBlocks = _totalScoringBlocks,
+                    MessyBlocks = _totalMessyBlocks,
+                    DestructionRatio = DestructionRatio,
+                });
                 //Debug.Log($"{MessyBlocks} / {TotalScoringBlocks} = {DestructionRatio}");
                 if (_messyBlocks.Count == 1)
                 {
@@ -61,7 +66,10 @@ namespace Coalesce
                     EventRouter.Dispatch(new EventTypes.GameStart { });
                 }
                 if (_rightBlocks.Count == 0)
+                {
                     EventRouter.Dispatch(new EventTypes.AllScoringBlocksMessy { });
+                    EventRouter.Dispatch(new EventTypes.GameEnd { });
+                }
             }
         }
 
