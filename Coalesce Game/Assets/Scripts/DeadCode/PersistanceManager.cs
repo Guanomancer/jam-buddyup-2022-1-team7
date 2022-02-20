@@ -13,6 +13,7 @@ namespace Coalesce.DeadCode
         {
             if(PlayerPrefs.GetInt(FIRST_RUN_NAME) == 0)
             {
+                PlayerPrefs.SetInt(FIRST_RUN_NAME, 1);
                 PlayerPrefs.SetFloat(VOLUME_NAME, 1f);
             }
             AudioListener.volume = PlayerPrefs.GetFloat(VOLUME_NAME);

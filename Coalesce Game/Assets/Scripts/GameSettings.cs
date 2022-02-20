@@ -58,5 +58,8 @@ namespace Coalesce
         [SerializeField]
         private float _blockGraceRatio = 0.05f;
         public float BlockGraceRatio => _blockGraceRatio;
+        [SerializeField]
+        private float _gameLengthInSeconds = 300f;
+        public float GameLengthInSeconds => _gameLengthInSeconds;
     }
 }

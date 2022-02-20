@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using Coalesce.EventRouting;
 
-namespace Coalesce
+namespace Coalesce.UI
 {
-    public class DestructometerController : MonoBehaviour
+    public class DestructometerController : MonoBehaviour, IEventSubscriber
     {
         [SerializeField]
         private Image _fillImage;
@@ -54,6 +55,21 @@ namespace Coalesce
                         _onPowerUp.Invoke();
                     }
                 }
+            }
+        }
+
+        private void OnEnable()
+            => EventRouter.Subscribe<EventTypes.ScoringBlockMessy>(this);
+        private void OnDisable()
+            => EventRouter.Unsubscribe<EventTypes.ScoringBlockMessy>(this);
+
+        public void OnEvent<T>(T eventData) where T : IEventData
+        {
+            switch(eventData)
+            {
+                case EventTypes.ScoringBlockMessy data:
+                    Destruction = data.DestructionRatio;
+                    break;
             }
         }
     }

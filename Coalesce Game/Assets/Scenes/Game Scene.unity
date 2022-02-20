@@ -21626,6 +21626,17 @@ PrefabInstance:
     - {fileID: 5158416445660135865, guid: 6c8980265e227884a83f269217942cc7, type: 3}
     - {fileID: 9047481925295929302, guid: 6c8980265e227884a83f269217942cc7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6c8980265e227884a83f269217942cc7, type: 3}
+--- !u!114 &772070328 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5799924728661521608, guid: c122a042deb72bb4aae343abd093a584, type: 3}
+  m_PrefabInstance: {fileID: 1605121381}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &773357663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31288,6 +31299,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1034518400}
   - component: {fileID: 1034518399}
+  - component: {fileID: 1034518401}
   m_Layer: 0
   m_Name: EventTriggers
   m_TagString: Untagged
@@ -31348,6 +31360,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1793001013}
+        m_TargetAssemblyTypeName: Coalesce.UI.Clock, Coalesce.UI
+        m_MethodName: StartClock
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  _advanceToNextScene: 0
 --- !u!4 &1034518400
 Transform:
   m_ObjectHideFlags: 0
@@ -31363,6 +31388,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1034518401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034518398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7adf2093f2024f428470cb25491fd23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _typeNames:
+  - GameEnd
+  _events:
+    m_PersistentCalls:
+      m_Calls: []
+  _advanceToNextScene: 1
 --- !u!1001 &1035690682
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39650,7 +39693,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1861898945203720212, guid: 2a3c9d9d52648cb43adcd63796be06a9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -30.73
+      value: -32.95
       objectReference: {fileID: 0}
     - target: {fileID: 1861898945203720212, guid: 2a3c9d9d52648cb43adcd63796be06a9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -39658,7 +39701,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1861898945203720212, guid: 2a3c9d9d52648cb43adcd63796be06a9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.64
+      value: -12.25
       objectReference: {fileID: 0}
     - target: {fileID: 1861898945203720212, guid: 2a3c9d9d52648cb43adcd63796be06a9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -51194,6 +51237,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 168139522047821620, guid: c122a042deb72bb4aae343abd093a584, type: 3}
+    - {fileID: 701175734, guid: c122a042deb72bb4aae343abd093a584, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c122a042deb72bb4aae343abd093a584, type: 3}
 --- !u!1001 &1607471982
 PrefabInstance:
@@ -57050,6 +57094,19 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 701175733, guid: c122a042deb72bb4aae343abd093a584, type: 3}
   m_PrefabInstance: {fileID: 1605121381}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1793001013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242029760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f20236c02241484dbddf52bd4cfba0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fillImage: {fileID: 772070328}
 --- !u!1001 &1793080887
 PrefabInstance:
   m_ObjectHideFlags: 0

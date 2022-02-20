@@ -81,8 +81,11 @@ namespace Coalesce.Nanny
             do
             {
                 _detector.RemoveBlockFromReachList(block);
-                Destroy(block.gameObject);
-                count++;
+                if(block.gameObject != null)
+                {
+                    Destroy(block.gameObject);
+                    count++;
+                }
                 block = _detector.GetBlockClosestTo(transform.position);
             } while (block != null && count < Settings.Game.MaxBlocksToPickUpAtOnce);
         }
