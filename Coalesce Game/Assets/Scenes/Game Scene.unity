@@ -31408,6 +31408,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   _advanceToNextScene: 0
+  _flushEventRouterSubscribers: 0
 --- !u!4 &1034518400
 Transform:
   m_ObjectHideFlags: 0
@@ -31441,6 +31442,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _advanceToNextScene: 1
+  _flushEventRouterSubscribers: 1
 --- !u!1001 &1035690682
 PrefabInstance:
   m_ObjectHideFlags: 0
