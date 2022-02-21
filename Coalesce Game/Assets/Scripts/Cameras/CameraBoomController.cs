@@ -11,6 +11,8 @@ namespace Coalesce.Cameras
         private Camera _camera;
         [SerializeField]
         private float _minDistanceFromZilla = 1.5f;
+        [SerializeField]
+        private string[] _ignoreLayers;
 
         private float _distance;
 
@@ -23,7 +25,7 @@ namespace Coalesce.Cameras
         {
             var ray = new Ray(transform.position, -_camera.transform.forward);
             var distance = _distance;
-            if (Physics.Raycast(ray, out RaycastHit hitInfo, 10f))
+            if (Physics.Raycast(ray, out RaycastHit hitInfo, 10f, ~LayerMask.GetMask(_ignoreLayers)))
                 distance =
                     Mathf.Min(-_minDistanceFromZilla,
                         Mathf.Max(_distance, -hitInfo.distance)

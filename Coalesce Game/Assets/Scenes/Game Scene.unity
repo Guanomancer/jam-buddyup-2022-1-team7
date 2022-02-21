@@ -45942,8 +45942,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1461371645}
-  - component: {fileID: 1461371644}
   - component: {fileID: 1461371646}
+  - component: {fileID: 1461371644}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -45965,7 +45965,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.3
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -46074,8 +46074,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca8524c882bfd7d4ba0cd09f7fa638d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _corridorTheme: {fileID: 8300000, guid: 4a7d29dfbf97f2c4dbd0996807999062, type: 3}
-  _mainTheme: {fileID: 8300000, guid: bc7dc8fcc8a7492419282dbda532fce8, type: 3}
+  _corridorTheme: {fileID: 8300000, guid: df8f49d24d595c44196dac31b6eafb71, type: 3}
+  _mainTheme: {fileID: 8300000, guid: 963daaccfb9c4864aa3a2f41a85dd702, type: 3}
+  _mainThemeLoop: {fileID: 8300000, guid: 86a33bab6e3bbb24e991fa6a9fc71ffa, type: 3}
+  _mainThemeLength: 138
+  _mainThemeLoopLength: 66
 --- !u!1 &1461445884 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4504491905788376245, guid: dba564c98e53de243b0c6c7a667ef86c, type: 3}
