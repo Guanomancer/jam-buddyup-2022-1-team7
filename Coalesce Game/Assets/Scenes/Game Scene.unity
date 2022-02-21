@@ -39737,6 +39737,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1861898945043254506, guid: 2a3c9d9d52648cb43adcd63796be06a9, type: 3}
+      propertyPath: _ignoreLayers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1861898945043254506, guid: 2a3c9d9d52648cb43adcd63796be06a9, type: 3}
+      propertyPath: _ignoreLayers.Array.data[0]
+      value: River
+      objectReference: {fileID: 0}
     - target: {fileID: 1861898945203720200, guid: 2a3c9d9d52648cb43adcd63796be06a9, type: 3}
       propertyPath: _distantTarget
       value: 
