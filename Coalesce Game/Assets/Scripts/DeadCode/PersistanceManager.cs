@@ -9,19 +9,35 @@ namespace Coalesce.DeadCode
         private const string FIRST_RUN_NAME = "FirstRun";
         private const string VOLUME_NAME = "Volume";
 
+        private bool _isInitialized;
+
         private void Start()
+            => Initialize();
+
+        private void Initialize()
         {
-            if(PlayerPrefs.GetInt(FIRST_RUN_NAME) == 0)
+            if (_isInitialized)
+                return;
+            
+            Debug.Log("First run: " + PlayerPrefs.GetInt(FIRST_RUN_NAME));
+            if (PlayerPrefs.GetInt(FIRST_RUN_NAME) == 0)
             {
                 PlayerPrefs.SetInt(FIRST_RUN_NAME, 1);
                 PlayerPrefs.SetFloat(VOLUME_NAME, 1f);
             }
             AudioListener.volume = PlayerPrefs.GetFloat(VOLUME_NAME);
+
+            _isInitialized = true;
         }
 
         public float Volume
         {
-            get => PlayerPrefs.GetFloat(VOLUME_NAME);
+            get
+            {
+                if (!_isInitialized)
+                    Initialize();
+                return PlayerPrefs.GetFloat(VOLUME_NAME);
+            }
             set
             {
                 var volume = Mathf.Clamp(value, 0, 1);
