@@ -8,6 +8,6 @@ namespace Coalesce.UI
     public class ScoreDisplayController : MonoBehaviour
     {
         private void Start()
-            => GetComponent<Text>().text = $"{Mathf.Clamp((float)System.Math.Round(FindObjectOfType<ScoreKeeper>().DestructionRatio * 100f, 2), 0f, 100f)}%";
+            => GetComponent<Text>().text = $"{(float)System.Math.Round(Mathf.Clamp(FindObjectOfType<ScoreKeeper>().DestructionRatio * 100f, 0f, 100f), 2)}%";
     }
 }

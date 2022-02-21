@@ -17,6 +17,9 @@ namespace Coalesce.EventRouting
         [SerializeField]
         private bool _advanceToNextScene;
 
+        [SerializeField]
+        private bool _flushEventRouterSubscribers;
+
         private void OnEnable()
         {
             foreach (var typeName in _typeNames)
@@ -34,6 +37,8 @@ namespace Coalesce.EventRouting
         public void OnEvent<T>(T eventData) where T : IEventData
         {
             _events.Invoke();
+            if (_flushEventRouterSubscribers)
+                EventRouter.FlushSubscribers();
             if (_advanceToNextScene)
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }

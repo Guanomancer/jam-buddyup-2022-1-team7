@@ -46,3 +46,4 @@ MonoBehaviour:
   _messyBlockDetectionRadius: 1
   _maxBlocksToPickUpAtOnce: 5
   _blockGraceRatio: 0.05
+  _gameLengthInSeconds: 300

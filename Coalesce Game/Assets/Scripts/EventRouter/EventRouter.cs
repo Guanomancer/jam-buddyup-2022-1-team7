@@ -16,6 +16,7 @@ namespace Coalesce.EventRouting
         private static int _isDispatching;
         private static List<(Type, IEventSubscriber)> _addWaitingList = new List<(Type, IEventSubscriber)>();
         private static List<(Type, IEventSubscriber)> _removeWaitingList = new List<(Type, IEventSubscriber)>();
+        private static bool _flush;
 
         public static void DisplayAllEvents()
             => _displayAllEvents = true;
@@ -65,6 +66,14 @@ namespace Coalesce.EventRouting
                 _subscribers[type].Remove(subscriber);
         }
 
+        public static void FlushSubscribers()
+        {
+            if (_isDispatching > 0)
+                _flush = true;
+            else
+                _subscribers.Clear();
+        }
+
         public static void Dispatch<T>(T eventData)
             where T : IEventData
         {
@@ -96,6 +105,9 @@ namespace Coalesce.EventRouting
                 foreach (var subscriber in _removeWaitingList)
                     _subscribers[subscriber.Item1].Remove(subscriber.Item2);
                 _removeWaitingList.Clear();
+
+                if (_flush)
+                    FlushSubscribers();
             }
         }
     }
