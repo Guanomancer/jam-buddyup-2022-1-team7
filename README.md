@@ -1,5 +1,7 @@
 # Buddy Up Game Jam 2022 Winter Team-7
 
+https://guanomancer.itch.io/totzilla
+
 ### Participants (discord ID)
 
 - Beck Belaith_Gador#0233
