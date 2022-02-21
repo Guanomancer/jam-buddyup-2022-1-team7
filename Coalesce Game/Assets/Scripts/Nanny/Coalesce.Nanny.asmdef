@@ -1,0 +1,17 @@
+{
+    "name": "Coalesce.Nanny",
+    "rootNamespace": "Coalesce.Nanny",
+    "references": [
+        "GUID:45c23eff3c401d749bdf3062b8bfd11c",
+        "GUID:4a8c92c69f5cffa4d89d32fd0c88dac6"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

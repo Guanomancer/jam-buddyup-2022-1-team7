@@ -9,31 +9,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a6a7d8fc2f794e41889a0c742f5fac4, type: 3}
+  m_Script: {fileID: 11500000, guid: 794f1f68bc949944397169c6f51e07df, type: 3}
   m_Name: Game Settings
   m_EditorClassIdentifier: 
-  _messynessMagnitudeThreshold: 5
-  _messynessSpinThreshold: 60
-  _messynessCalculationTimeDelay: 5
-  _blockCollisionSounds: {fileID: 11400000, guid: 61bfb6c1928bb6a48943f38af527ce6b, type: 2}
+  _messynessMagnitudeThreshold: 0.3
+  _messynessSpinThreshold: 30
+  _batchUpdaterTimeDelay: 10
+  _blockCollisionSounds: {fileID: 11400000, guid: 6c182d703fdab9148b7e2ebdc7433def, type: 2}
   _blockCollisionSoundTriggerImpulseThreshold: 3
-  _blockCollisionSoundTriggerVelocityThreshold: 1.5
-  _blockCollisionSoundTriggerAngularVelocityThreshold: 100
+  _blockCollisionSoundTriggerVelocityThreshold: 0.5
+  _blockCollisionSoundTriggerAngularVelocityThreshold: 0.5
   _blockCollisionSoundCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: -0.0060637225
-      value: 0.20528199
-      inSlope: 0.13039346
-      outSlope: 0.13039346
+      time: 0
+      value: 0.1458435
+      inSlope: 0.21396758
+      outSlope: 0.21396758
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.0775076
+      outWeight: 0.093522325
     - serializedVersion: 3
-      time: 3.9899292
-      value: 0.9806824
+      time: 3.990403
+      value: 0.9930543
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -43,5 +43,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _messyBlockDetectionRadius: 2
+  _messyBlockDetectionRadius: 1
   _maxBlocksToPickUpAtOnce: 5
+  _blockGraceRatio: 0.05

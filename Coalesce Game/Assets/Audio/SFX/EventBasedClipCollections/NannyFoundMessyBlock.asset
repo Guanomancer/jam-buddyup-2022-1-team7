@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 069f871cb0c258a4f9cea50b7e0773a2, type: 3}
+  m_Name: NannyFoundMessyBlock
+  m_EditorClassIdentifier: 
+  _audioClips:
+  - {fileID: 8300000, guid: abb2ec1384e7f6c48906f342371283af, type: 3}
+  - {fileID: 8300000, guid: 08fbf3b7395f8984b88427ce2862888f, type: 3}
+  - {fileID: 8300000, guid: 110d95b5309ac89488b9c218777cd38c, type: 3}
+  _neverPlayTheSameClipTwice: 1
+  _skipFirstEvent: 0
+  _firstEventDelay: -1
+  _intervalDelay: 30

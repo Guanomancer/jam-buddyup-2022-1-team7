@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 069f871cb0c258a4f9cea50b7e0773a2, type: 3}
+  m_Name: NannyGoingToRest
+  m_EditorClassIdentifier: 
+  _audioClips:
+  - {fileID: 8300000, guid: 01d6a3c973699f34291997f373a3f499, type: 3}
+  - {fileID: 8300000, guid: acdceb6acdc74de48abdf1a05309e39d, type: 3}
+  - {fileID: 8300000, guid: 87d9b9ea15dcdf642bd7061970015b4a, type: 3}
+  _neverPlayTheSameClipTwice: 1
+  _skipFirstEvent: 0
+  _firstEventDelay: -1
+  _intervalDelay: -1

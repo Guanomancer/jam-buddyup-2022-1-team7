@@ -16,10 +16,10 @@ namespace Coalesce
         private float _messynessSpinThreshold = 30f;
         public float MessynessSpinThreshold
             => _messynessSpinThreshold;
-        [SerializeField, Tooltip("Time in seconds before messyness calculations start. This will let the blocks settle before calculating which ones have moved.")]
-        private float _messynessCalculationTimeDelay = 5f;
-        public float MessynessCalculationTimeDelay
-            => _messynessCalculationTimeDelay;
+        [SerializeField, Tooltip("Time in seconds before batch updater starts calculating messyness etc. This will let the blocks settle before calculating which ones have moved.")]
+        private float _batchUpdaterTimeDelay = 10f;
+        public float BatchUpdaterTimeDelay
+            => _batchUpdaterTimeDelay;
 
         [Header("Sounds")]
         [SerializeField]
@@ -53,5 +53,13 @@ namespace Coalesce
         private int _maxBlocksToPickUpAtOnce = 5;
         public int MaxBlocksToPickUpAtOnce
             => _maxBlocksToPickUpAtOnce;
+
+        [Header("Gameplay")]
+        [SerializeField]
+        private float _blockGraceRatio = 0.05f;
+        public float BlockGraceRatio => _blockGraceRatio;
+        [SerializeField]
+        private float _gameLengthInSeconds = 300f;
+        public float GameLengthInSeconds => _gameLengthInSeconds;
     }
 }

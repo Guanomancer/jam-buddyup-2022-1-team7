@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 069f871cb0c258a4f9cea50b7e0773a2, type: 3}
+  m_Name: ZillaLeftFoot
+  m_EditorClassIdentifier: 
+  _volumeScale: 0.2
+  _audioClips:
+  - {fileID: 8300000, guid: ec16989401785e54f8714726e2b2e98d, type: 3}
+  - {fileID: 8300000, guid: a7e82cb0ba601b749a380d94b0712afc, type: 3}
+  - {fileID: 8300000, guid: ba3a91e65586d2546b339c84a30677b0, type: 3}
+  _neverPlayTheSameClipTwice: 1
+  _skipFirstEvent: 0
+  _firstEventDelay: -1
+  _intervalDelay: -1
+  _ignoreOneShotDelay: 1
